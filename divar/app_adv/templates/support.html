@@ -1,0 +1,40 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+{% block content %}
+<div class="listar-homebannerslider">
+    <div id="listar-homeslider" class="listar-homeslider owl-carousel">
+        <div class="item"><figure><img src="{% static 'images/slider/img-01.jpg'%}" alt="image description"></figure></div>
+        <div class="item"><figure><img src="{% static 'images/slider/img-02.jpg'%}" alt="image description"></figure></div>
+        <div class="item"><figure><img src="{% static 'images/slider/img-03.jpg'%}" alt="image description"></figure></div>
+        <div class="item"><figure><img src="{% static 'images/slider/img-04.jpg'%}" alt="image description"></figure></div>
+        <div class="item"><figure><img src="{% static 'images/slider/img-05.jpg'%}" alt="image description"></figure></div>
+    </div>
+    <div class="listar-homebanner">
+        <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="listar-bannercontent">
+                            <div class="listar-description"></div>
+                            <form class="listar-formtheme listar-formsearchlisting">
+                                                       
+                            </form>                       
+                        </div>
+                    </div>
+                </div>
+                    <footer class="site-footer">
+
+                        <div class="contact_cta">
+                            <h1>در تمامی ساعات شبانه‌ روز و ایام هفته می‌توانید با ما در ارتباط باشید </h1>
+                            <div class="status off">
+                               
+                            </div>
+                                <p id="contact" href="#contact-links">09301270522 ارتباط با پشتیبانی</p>
+                            </div>
+                        <script type="text/javascript">window.DESKPRO_WIDGET_OPTIONS = {"helpdeskUrl":"https:\/\/support.divar.ir\/b\/support-users\/"}; </script>
+                        <script async type="text/javascript" id="dp-widget-loader" src="https://support.divar.ir/dyn-assets/pub/build/widget_loader.min.js"></script>
+                
+                    </footer>
+        </div>      
+    </div>
+</div>
+{% endblock %}

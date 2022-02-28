@@ -1,0 +1,22 @@
+{% load static %}
+{% load render_partial %}
+<!doctype html>
+<html class="no-js" lang="zxx"> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	<meta name="description" content="">
+    <meta name="author" content="">
+	<title>{% block title %}{% endblock %}</title>
+	{% include 'shared/_Header.html' %}
+	
+</head>
+<body>
+{% render_partial 'sidebar' %}
+{% block content %}{% endblock %}
+{% include 'shared/_FooterReferences.html' %}
+{% render_partial 'footerdash' %}
+{% block footer_ref %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,589 @@
+@media (max-width:1680px){
+	.listar-contentarea {padding: 30px;}
+	.listar-themetabs{padding: 0 15%;}
+	.listar-signinloginwithsocialaccount{text-align: center;}
+	.listar-postfirstlisting figure {padding: 103px 57px;}
+	.listar-newsletteroverlay {padding: 100px 50px;}
+	.listar-select select{
+		height: 60px;
+		line-height: 28px;
+		padding: 15px 15px 15px 45px;
+	}
+}
+@media (max-width:1600px){
+	.listar-postfirstlisting figure {padding: 109px 57px;}
+}
+@media (max-width:1440px){
+	.listar-homeslider .item figure img{
+		width: auto;
+		height: 820px;
+		max-width: none;
+	}
+	.listar-postfirstlisting figure {padding: 109px 58px;}
+	.listar-newsletteroverlay {padding: 76px 50px;}
+	.listar-followus figure {padding: 114px 88px;}
+	.listar-bestplacesincity { padding: 60px 0 0;}
+	.listar-bannercontent .listar-description {padding: 20px 0 50px;}
+}
+@media (max-width:1366px){
+	.listar-postfirstlisting figure {padding: 114px 57px;}
+	.listar-followus figure {padding: 120px 88px;}
+}
+@media (max-width:1360px){
+	.listar-postfirstlisting figure {padding: 114px 56px;}
+	.listar-followus figure {padding: 120px 87px;}
+	.listar-gridview .listar-review{
+		width: 100%;
+		padding: 0 0 10px;
+	}
+	.listar-gridview .listar-category{float: left;}
+}
+@media (max-width:1310px){
+	.listar-postfirstlisting figure {padding: 114px 57px;}
+	.listar-newsletteroverlay {padding: 72px 50px;}
+	.listar-innersearch .listar-formsearchlisting {padding: 20px 0;}
+	.listar-pricingplanbody {padding: 60px 30px;}
+	.listar-pricingplan:nth-child(3) .listar-pricingplanbody {padding: 60px 30px 100px;}
+	.listar-pricingplansvtwo .listar-pricingplan:nth-child(3) .listar-pricingplanbody {padding: 0 60px;}
+	.listar-feature figure {
+		width: 40%;
+		margin: 0 50px 0 0;
+	}
+	.listar-feature:nth-child(odd) figure {margin: 0 0 0 50px;}
+	.listar-featurecontent {margin: 76px 0;}
+	.listar-authorgallery li{width: 25%;}
+	.listar-formsearchlisting {padding: 0;}
+}
+@media (max-width:1309px){
+	.listar-header .container{width: 100%;}
+	.listar-formsearchlisting {padding: 0;}
+	.listar-sectionhead .listar-description {padding: 20px 20% 0;}
+	.listar-testimonials {padding: 20px;}
+	.listar-themepostfoot ul li {padding: 0 18px;}
+}
+@media (max-width:1280px){
+	.listar-newsletteroverlay {padding: 73px 50px 72px;}
+	.listar-postfirstlisting figure {padding: 114px 52px;}
+	.listar-followus figure {padding: 120px 81px;}
+}
+@media (max-width:1200px){
+	.listar-postfirstlisting figure {padding: 114px 38px;}
+	.listar-followus figure {padding: 120px 67px;}
+	.listar-advancefitures .listar-checkbox {width: 50%;}
+}
+@media (max-width:1080px){
+	.listar-navigation > ul > li {padding: 7px 15px;}
+	.listar-newsletteroverlay {padding: 64px 30px 63px;}
+	.listar-followus figure {padding: 107px 39px;}
+	.listar-listingarea .listar-formsearchlisting fieldset:first-child .form-group:last-child{margin: 30px 0 0;}
+	.listar-formsearchlisting fieldset .listar-leftbox{width: 100%;}
+	.listar-formsearchlisting fieldset .listar-rightbox{
+		width: 100%;
+		padding: 20px 0 0;
+	}
+	.listar-placesposts.listar-gridview .listar-placespost{width: 100%;}
+	.listar-listview .listar-featuredimg{
+		width: 100%;
+		-webkit-border-radius: 10px 10px 0 0;
+				border-radius: 10px 10px 0 0;
+	}
+	.listar-listview .listar-featuredimg a img{
+		width: 100%;
+		height: auto;
+	}
+	.listar-listview .listar-placespost .listar-postcontent{
+		width: 100%;
+		padding: 30px 0 0 15px;
+	}
+	.listar-listview .listar-themepostfoot{
+		padding-left: 15px;
+		margin: 0 0 0 -15px;
+	}
+	.listar-listingarea .listar-formsearchlisting fieldset:first-child .form-group {width: 50%;}
+	.listar-businesstype {padding: 50px;}
+	.listar-homebannervfour figure img{
+		width: auto;
+		height: 100%;
+		max-width: none;
+		min-height: 540px;
+	}
+}
+@media (max-width:1050px){
+	.listar-postfirstlisting figure {padding: 128px 39px;}
+	.listar-newsletteroverlay {padding: 63px 30px;}
+	.listar-followus figure {padding: 121px 39px;}
+}
+@media (max-width:1024px){
+	.listar-navigation > ul > li {padding: 7px;}
+	.listar-themetabs {padding: 0;}
+	.listar-shareor{margin: 0;}
+	.listar-newsletteroverlay {padding: 61px 30px;}
+}
+@media (max-width:991px){
+	.listar-overview:before,
+	.listar-prices:before{display: none;}
+	.listar-overview .listar-leftbox,
+	.listar-overview .listar-rightbox {
+		border: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.listar-overview .listar-rightbox{padding: 40px 0 0;}
+	.listar-prices li{width: 100%;}
+	.listar-prices li:nth-child(odd),
+	.listar-prices li:nth-child(even){padding: 0;}
+	.listar-pricebox{padding: 30px 50px 30px 0;}
+	.listar-prices li:nth-child(2) .listar-pricebox{padding-top: 30px}
+	.listar-commentcontent{
+		width: 100%;
+		float: left;
+		padding: 30px 0 0;
+	}
+	.listar-formreviewarea{width: 100%;}
+	.listar-detailvtwo .listar-featuredimg img{
+		width: auto;
+		height: 350px;
+		max-width: none;
+	}
+	.listar-detailvtwo .listar-reviewcategory,
+	.listar-detailvtwo .listar-postinfotags{
+		width: 100%;
+		padding: 20px;
+	}
+	.listar-detailvtwo .listar-reviewcategory{padding-bottom: 0;}
+	.listar-detailvtwo .listar-fixedtabnav .listar-themetabnav{
+		width: auto;
+		float: left;
+	}
+	.listar-detailvtwo .listar-themetabnav li a{padding: 0 50px 10px 0;}
+	.listar-pricingplansvtwo .listar-pricingplan {padding: 30px;}
+	.listar-homebannervthree {max-height: 700px;}
+	.listar-pricingplansvtwo .listar-pricingplanbody,
+	.listar-pricingplansvtwo .listar-pricingplan.listar-hotplan .listar-pricingplanbody {padding: 0;}
+	.listar-homebannervthree figure img{
+		width: auto;
+		height: 100%;
+		max-width: none;
+		min-height: 540px;
+	}
+	.listar-bestplacestitle{width: 100%;}
+	.listar-bestplacestitle h2 {font: 32px/38px 'saginaw_medium';}
+	.listar-bestplacestitle h2 span {display: inline;}
+	.listar-bestplacesincity ul{
+		width: 100%;
+		float: left;
+	}
+	.listar-bestplacesincity ul li i {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.listar-homebannervfour .listar-bestplacesincity{display: none;}
+	.listar-businesstype{width: 100%;}
+}
+@media (max-width:900px){
+	.listar-signinloginwithsocialaccount li a {padding: 0 15px;}
+	.listar-signinloginwithsocialaccount li a i {margin: 0 5px 0 0;}
+	.listar-addnav .listar-btn{padding: 0 14px;}
+	.listar-addnav li:last-child .listar-btn{padding: 0;}
+	.listar-navigation > ul > li {padding: 7px 6px;}
+	.listar-formsearchlisting fieldset {padding: 0 140px 0 0;}
+	.listar-formsearchlisting .form-group:nth-child(3) {padding: 0 0 0 30px;}
+	.listar-formsearchlisting .form-group:nth-child(3) i {width: 30px;}
+	.listar-rangeslider, .slider.slider-horizontal {width: 70% !important;}
+	.listar-formsearchlisting .listar-btn {width: 130px;}
+	.listar-newsletteroverlay {padding: 52px 30px;}
+	.listar-followus figure {padding: 122px 39px;}
+	.listar-navfooter{
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.listar-pricingplan {width: 50%;}
+	.listar-pricingplan:nth-child(3){margin: 0;}
+	.listar-pricingplan:nth-child(3) .listar-pricingplanbody{padding: 60px 30px 60px;}
+	.listar-pricingplan:nth-child(3) .listar-pricingplanbody ul {padding: 60px 0 0;}
+	.listar-feature figure {margin: 0 40px 0 0;}
+	.listar-feature:nth-child(odd) figure {margin: 0 0 0 40px;}
+	.listar-featurecontent {margin: 20px 0;}
+	.listar-testimonialsvtwo{
+		margin: 0;
+		padding: 0;
+	}
+	.listar-testimonialsvtwo .listar-testimonial {
+		width: 100%;
+		padding: 0 0 20px;
+	}
+	.listar-homebanner > .container{width: 100%;}
+	.listar-postfirstlisting figure {padding: 128px 40px;}
+	.listar-detailvtwo .listar-detailcontent .listar-content{margin: 0 45% 0 0;}
+	.listar-detailvtwo .listar-themetabnav li a{padding: 0 34px 10px 0;}
+	.listar-sectionholder .listar-amenities li {width: 50%;}
+	.listar-sidebar {width: 45%;}
+	.listar-headervtwo {padding: 15px 0;}
+}
+@media (max-width:800px){
+	.listar-contentarea {padding: 20px;}
+	.listar-header{
+		z-index: 12;
+		text-align: right;
+	}
+	.listar-addnav,
+	.listar-nav{
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.listar-nav{padding-left: 20px;}
+	/*==========================================================================================
+			For Mobile Nav use this code in Responsive.css desired Query
+	==========================================================================================*/
+	.navbar-toggle{display: block;}
+	.navbar-collapse.collapse {display: none!important;}
+	.collapse.in{display:block !important;}
+	/*==========================================================================================
+				For Mobile Nav use this code in Responsive.css desired Query
+	==========================================================================================*/
+	.listar-dropdowarrow{display: block;}
+	.listar-navigation{
+		top: 60px;
+		left: 0;
+		background: #fff;
+		position: absolute;
+	}
+	.listar-navigation ul{}
+	.listar-navigation ul li{
+		padding: 0;
+		width: 100%;
+		float: left;
+		display: block;
+	}
+	.listar-navigation ul li + li{border-top: 1px solid #ddd;}
+	body.listar-home .listar-navigation > ul > li > a,
+	.listar-navigation ul li a{
+		color: #222;
+		padding: 0 20px;
+		text-align: left;
+		line-height: 40px;
+	}
+	.menu-item-has-children > a:before{display: none;}
+	.sub-menu,
+	.mega-menu{
+		padding: 0;
+		opacity: 1;
+		clear: both;
+		float: left;
+		display: none;
+		position: static;
+		visibility: visible;
+		width: 100% !important;
+		-webkit-box-shadow: none;
+				box-shadow: none;
+		border-top: 1px solid #ddd;
+	}
+	.listar-formsearchlisting fieldset{
+		padding: 0;
+		height: auto;
+		-webkit-border-radius: none;
+				border-radius: none;
+	}
+	.listar-formsearchlisting .form-group{
+		border: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.listar-formsearchlisting .form-group + .form-group{border-top: 1px solid #cacaca;}
+	.listar-formsearchlisting .form-group:nth-child(3) {padding: 0 20px 0 45px;}
+	.listar-formsearchlisting .form-group:nth-child(3) i {width: 45px;}
+	.listar-rangeslider,
+	.slider.slider-horizontal {width: 90% !important;}
+	.listar-formsearchlisting .listar-btn{
+		width: 100%;
+		position: static;
+		-webkit-border-radius: 0 0 30px 30px;
+				border-radius: 0 0 30px 30px;
+	}
+	.listar-testimonial blockquote {padding: 0;}
+	.listar-followus figure {padding: 119px 39px;}
+	.listar-listingarea .listar-formsearchlisting fieldset:first-child .form-group:last-child,
+	.listar-listingarea .listar-formsearchlisting fieldset:first-child .form-group{margin: 10px 0;}
+	.listar-advancefitures .listar-checkbox {width: 1000%;}
+	.listar-listingarea .listar-formsearchlisting .listar-btn{
+		-webkit-border-radius: 30px;
+				border-radius: 30px;
+	}
+	.chosen-container{width: 100% !important;}
+}
+@media (max-width:768px){
+	.listar-postfirstlisting figure {padding: 127px 40px;}
+	.listar-listingarea .listar-formsearchlisting fieldset:first-child .form-group {width: 100%;}
+}
+@media (max-width:767px){
+	.listar-loginsingupimg{
+		z-index: 1;
+		width: 100%;
+		position: absolute;
+	}
+	.listar-contentarea{
+		z-index: 2;
+		width: 100%;
+		padding: 30px;
+		position: relative;
+		background: rgba(255, 255, 255, 0.80);
+	}
+	.modal.in .modal-dialog {
+		margin: 0 auto;
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+	}
+	.listar-placequickview .listar-featuredimg{
+		width: 100%;
+		float: left;
+		height: 250px;
+		position: static;
+	}
+	.listar-placequickview .listar-placespost .listar-postcontent{
+		width: 100%;
+		float: left;
+		padding: 30px 30px 0;
+	}
+	.listar-listfeatures li {width: 100%;}
+	.listar-home .listar-header {top: 0;}
+	.listar-newsletteroverlay,
+	.listar-postfirstlisting figure,
+	.listar-followus figure {padding: 60px 30px;}
+	.listar-lowerbox .listar-description,
+	.listar-lowerbox address {
+		width: 100%;
+		text-align: center;
+	}
+	.listar-lowerbox address{padding-top: 20px;}
+	.listar-sectiontitle h2 {
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.listar-sectionhead .listar-description {padding: 20px 0 0;}
+	.listar-feature figure,
+	.listar-feature:nth-child(odd) figure,
+	.listar-featurecontent {margin: 0;}
+	.listar-mapclustring {
+		width: 100%;
+		position: static !important;
+	}
+	.listar-fileuploadlabel{float: left;}
+	.listar-sectionholder .listar-amenities li{width: 100%;}
+	.listar-categoryposts.listar-gridslider{padding: 0;}
+	.listar-detailvtwo .listar-detailcontent .listar-content{
+		margin: 0;
+		width: 100%;
+		float: left;
+	}
+	#listar-stickysidebar.listar-sidebar{margin: 50px 0 0;}
+	#listar-stickysidebar.listar-sidebar,
+	#listar-stickysidebar.listar-sidebar.listar-fixedsidebar,
+	#listar-stickysidebar.listar-sidebar .inner-wrapper-sticky,
+	#listar-stickysidebar.listar-sidebar.listar-fixedsidebar .inner-wrapper-sticky,
+	#listar-stickysidebar.listar-sidebar.listar-fixedsidebar .sidebar__inner{
+		height: auto !important;
+		width: 100% !important;
+		float: left !important;
+		position: static !important;
+		-webkit-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-o-transform: none !important;
+		transform: none !important;
+	}
+	.listar-bestplacesincity {display: none;}
+	.listar-bannercontent .listar-description {padding: 20px 0;}
+	.listar-bestplacesincity ul li i {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.listar-pricingplansvtwo .listar-pricingplan {
+		width: 100%;
+		margin:  0;
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+		border-radius: 20px !important;
+	}
+	.listar-bannercontent h1 {
+		font-size: 36px;
+		line-height: 26px;
+	}
+	.listar-homebannervfour .listar-formsearchlisting .form-group{border: 0 !important;}
+	.listar-pricingplan.listar-hotplan {margin: 30px 0;}
+	.listar-spanishresturentcontent {
+		width: 70%;
+		padding: 20px;
+	}
+	.listar-listingbox {
+		margin: 0;
+		width: 100%;
+		float: left;
+	}
+}
+@media (max-width:640px){
+	.listar-masnory{width: 50%;}
+	.listar-testimonialslider .listar-sliderdots{
+		padding: 0;
+		height: 10px;
+		position: static;
+		text-align: center;
+	}
+}
+@media (max-width:568px){
+	.listar-logo {
+		float: none;
+		width: 177px;
+		display: block;
+		margin: 0 auto 15px;
+	}
+	.listar-addnav{
+		padding: 0;
+		float: left;
+	}
+	.listar-nav{
+		padding: 0;
+		float: right;
+	}
+	.listar-homebanner {padding: 124px 0 0;}
+	.listar-navigation {top: 120px;}
+	.listar-bannercontent h1 {font-size: 40px;}
+	.listar-videobox h2 span,
+	.listar-addlisting h2 {
+		font-size: 30px;
+		line-height: 42px;
+	}
+	.listar-testimonial figure{
+		width: 217px;
+		float: none;
+		margin: 0 auto;
+	}
+	.listar-testimonial blockquote{
+		width: 100%;
+		float: left;
+		margin: 30px 0 0;
+	}
+	.listar-testimonialslider .listar-sliderdots{
+		padding: 20px 0 0;
+		position: static;
+		text-align: center;
+	}
+	.listar-pricingplan {width: 100%;}
+	.listar-pagetitle h1 {font-size: 30px;}
+	.listar-howitwork .listar-feature,
+	.listar-howitwork .listar-feature:nth-child(even){text-align: center;}
+	.listar-feature figure,
+	.listar-feature:nth-child(odd) figure{
+		width: auto;
+		float: none;
+		margin: 0 auto 30px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.listar-featurecontent {width: 90%;}
+	.listar-howitwork .listar-feature:nth-child(even) .listar-featurecontent{float: right;}
+	.listar-detail .listar-postcontent h1 {font-size: 26px;}
+	.listar-placespost.listar-detail.listar-detailvone {margin: 59px 0 0;}
+}
+@media (max-width:480px){
+	.listar-themetabnav li{
+		width: 100%;
+		float: left;
+	}
+	.listar-themetabnav li a{border: 0;}
+	.listar-themetabnav li.active a {border-bottom-color: #e5e5e5;}
+	.listar-amenities li{width: 100%;}
+	.listar-detailvtwo .listar-themetabnav li{width: auto;}
+	.listar-detailvone .listar-featuredimg img{
+		width: auto;
+		max-width: none;
+		height: 350px;
+	}
+	.listar-detail .listar-postcontent {
+		margin: -60px 0 0;
+		padding: 20px 0 0;
+	}
+	.listar-detail .listar-reviewcategory {padding: 0 15px 20px;}
+	.listar-detailvtwo .listar-fixedtabnav .listar-themetabnav + .listar-socialicons{float: left;}
+}
+@media (max-width:479px){
+	.listar-logo{
+		margin: 0;
+		z-index: 2;
+		float: left;
+		position: relative;
+	}
+	.listar-nav{
+		top: 0px;
+		right: 0;
+		z-index: 1;
+		width: 100%;
+		position: absolute;
+	}
+	.navbar-toggle {margin: 8px 15px 8px 0;}
+	.listar-navigation {top: 60px;}
+	.listar-addnav{
+		width: 100%;
+		padding: 15px 0 0;
+	}
+	.listar-addnav ul{text-align: center;}
+	.listar-addnav ul li{
+		float: none;
+		padding: 0 0 0 5px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.listar-addnav ul li:first-child{padding: 0;}
+	.listar-rangeslider, .slider.slider-horizontal {width: 80% !important;}
+	.listar-formcontactus,
+	.listar-contactinfo{padding: 15px;}
+	.listar-featurecontent {
+		width: 86%;
+		padding: 60px 20px 20px;
+	}
+	.listar-feature h2 {font-size: 20px;}
+	.listar-commentauthorbox{
+		max-width: 260px;
+		width: 100%;
+	}
+	.listar-helpful{
+		float: left;
+		margin: 15px 0 0;
+	}
+	.listar-masnory{width: 100%;}
+	.listar-detail .listar-postcontent h1 {
+		margin: 0 15px;
+		font-size: 20px;
+		line-height: 23px;
+		padding: 0 15px 0 0;
+	}
+	.listar-detailvtwo .listar-featuredimg img {height: 450px;}
+	.listar-horizontalthemescrollbar .listar-placespost {width: 290px;}
+	.listar-fileuploadlabel{padding: 30px 15px;}
+	.listar-upperbox .listar-logo{
+		float: none;
+		margin: 0 auto;
+	}
+	.listar-upperbox .listar-socialicons{
+		width: 100%;
+		text-align: center;
+	}
+	.listar-upperbox .listar-socialicons li{
+		float: none;
+		vertical-align: top;
+		display: inline-block;
+	}
+	.listar-detailvtwo .listar-themetabnav li a {padding: 0 20px 10px 0;}
+}
+@media (max-width:359px){
+	.listar-btn i + span {padding: 0 0 0 5px;}
+	.listar-addnav .listar-btn {padding: 0 11px;}
+	.listar-contactinfolist li span{width: 220px;}
+	.listar-detailvtwo .listar-themetabnav li a{padding: 0 10px 10px 0;}
+	.listar-category{
+		float: left;
+		margin: 5px 0 0;
+	}
+}

@@ -1,0 +1,181 @@
+{% load static %}
+<footer id="listar-footer" class="listar-footer listar-haslayout">
+    <div class="listar-footeraboutarea">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="listar-upperbox">
+                        <strong class="listar-logo"><a href="javascript:void(0);"><img src="{% static 'images/logo1.png'%}" alt="image description"></a></strong>
+                        <ul class="listar-socialicons">
+                            <li class="listar-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                            <li class="listar-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                            <li class="listar-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="listar-googleplus"><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="listar-vimeo"><a href="javascript:void(0);"><i class="fa fa-vimeo"></i></a></li>
+                        </ul>
+                        <nav id="listar-nav" class="listar-nav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#listar-navigation" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div id="listar-navigation" class="collapse navbar-collapse listar-navigation" style="margin-left: 137px;">
+                                <ul >
+                                    <li class="menu-item-has-children" >
+                                        <a href="javascript:void(0);"style="color: #f6f3f3">دیوار من</a>
+                                        <ul class="sub-menu">
+                                            {% if not request.user.is_authenticated %}
+                                            <li><a href="login">ورود</a></li>
+                                            
+                                            {% elif request.user.is_authenticated %}
+                                            <li ><a href="/dashboard">صفحه شخصی من</a></li>
+                                            <li><a href="#">نشان شده</a></li>
+                                            <li><a href="#">یادداشت</a></li>
+                                            <li><a href="#">دیوار برای کسب و کار</a></li>
+                                            <li><a href="#">بازدیدهای اخیر</a></li>
+                                            {% endif %}
+                                        </ul>                               
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="/advertis" style="color: #f6f3f3">(لیست اگهی ها)جستجو</a>
+                                    </li> 
+                                    <li class="menu-item-has-children current-menu-item">
+                                        <a href="/"style="color: #f6f3f3">صفحه اصلی</a>
+                                    </li>
+                                    </li>                           
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="listar-lowerbox">
+                        <div class="listar-description">
+                            <h3 style="color: wheat;">معرفی محصولات و خدمات شما به همه در کمترین زمان ممکن</h3>
+                        </div>
+                        <address><strong>آدرس:</strong> اصفهان خیابان بزرگمهر<span><strong>Tel:</strong> 09301270522</span></address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="listar-footerbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <span class="listar-copyright">Copyright &copy; 2018 <a href="https://www.netnoo.ir/"> WWW.netnoo.ir</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--<footer id="footer">
+    <div class="footer-Before">
+        <div class="container">
+            <div class="block-news">
+                <div class="row">
+                    <h3>با عضویت در خبـرنامه ما از تخفیفات ویـژه ما با خبـر شوید ... </h3>
+                    <div class="searchform newslatter">
+                        <input type="text" placeholder="آدرس ایمیـل شما ..."/>
+                        <button type="submit" class="btn btn-default">
+                            <i class="fa fa-arrow-circle-o-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="address">
+                        <img src="images/home/map.png" alt=""/>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="address">
+                        <img src="images/home/map.png" alt=""/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="companyinfo">
+                        <h2><span>SHOP</span>CENTER</h2>
+                        <h4>درباره ما :</h4>
+                        <p>
+                            {{ setting.about_us }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="single-widget">
+                        <h2>Service</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Online Help</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Change Location</a></li>
+                            <li><a href="#">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-widget">
+                        <h2>Quock Shop</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Mens</a></li>
+                            <li><a href="#">Womens</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Shoes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-widget">
+                        <h2>Policies</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privecy Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Billing System</a></li>
+                            <li><a href="#">Ticket System</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="single-widget">
+                        <h2>About Shopper</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Company Information</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Store Location</a></li>
+                            <li><a href="#">Affillate Program</a></li>
+                            <li><a href="#">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom" style="direction: ltr !important;">
+        <div class="container">
+            <div class="row">
+                <p class="pull-right" style="direction: rtl">
+                    {{ setting.copy_right }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>

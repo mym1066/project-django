@@ -1,0 +1,73 @@
+<!-- 
+{% load static %}
+
+<div class="listar-homebanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="listar-bannercontent">
+                    <h1>خدمات محلی را بیابید</h1>
+                    <div class="listar-description">
+                        <p>بهترین مکان های شهر را برای غذا، فعالیت و استراحت پیدا کنید
+                        </p>
+                    </div>
+                    <form action="/search" class="listar-formtheme listar-formsearchlisting" >
+                        <fieldset>
+                            <div class="form-group listar-inputwithicon">
+                                <i class="icon-layers"></i>
+                                <div class="listar-select">
+                                    <select id="listar-categorieschosen" class="listar-categorieschosen listar-chosendropdown">
+                                      
+                                        <option>مثال: غذا، خرده فروشی، هتل، سینما</option>
+                                        <option ></option>class="icon-entertainment"املاک</option>
+                                        <option class="icon-spa">وسایل نقلیه</option>
+                                        <option class="icon-education">کالای دیجیتال</option>
+                                        <option class="icon-healthfitness">خانه و اشپزخانه</option>
+                                        <option class="icon-tourism">خدمات</option>
+                                        <option class="icon-localservice">وسایل شخصی</option>
+                                        <option class="icon-nightlife">سرگزمی و فراغت</option>
+                                        <option class="icon-foods">اجتماعی</option>
+                                        <option class="icon-museum"> تجهیزات و صنعتی</option>
+                                        <option class="icon-shopping">استخدام و کاریابی</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group listar-inputwithicon">
+                                <i class="icon-global"></i>
+                                <div class="listar-select listar-selectlocation">
+                                    <select id="listar-locationchosen" class="listar-locationchosen listar-chosendropdown">
+                                        <option>یک مکان را انتخاب کنید</option>
+                                        <option>Lahore</option>
+                                        <option>Bayonne</option>
+                                        <option>Greenville</option>
+                                        <option>Manhattan</option>
+                                        <option>Queens</option>
+                                        <option>The Heights</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group listar-inputwithicon">
+                                <i class=""><img src="{% static 'images/icons/icon-01.png'%}" alt="image description"></i>
+                                <p>قیمت: </p>
+                                <input id="listar-rangeslider" class="listar-rangeslider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14">
+                            </div>
+                            <button type="button" class="listar-btn listar-btngreen" onclick="location.href='advertis/search';" value="{{ request.GET.q}} name='q">جستجو</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<fieldset>
+    <div class="form-group listar-inputwithicon"></div>                                                                                                                  
+        <div class="form-group listar-inputwithicon">     
+            <form action="{% url 'advertis_search' %}" method="get">
+                <input type="text" class="omnisearch" name="q" autocomplete="off" placeholder="جست و جو کنید ..." style = "width: 838px;margin: 4px"{{request.GET.q}}>
+                                                                               
+                <!-- <button type="button" class="listar-btn listar-btngreen">جستجو</button> -->
+            </form>
+                <a href="#" class="search-clear" style="display: none;"><i class="fas fa-times"></i></a>
+            <input type="hidden" name="search_log_id" >        
+        </div>                                                  
+</fieldset>

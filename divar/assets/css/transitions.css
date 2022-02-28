@@ -1,0 +1,35 @@
+*:after,
+*:before,
+p a,
+a,
+.sub-menu,
+.mega-menu,
+.listar-socialicons li a,
+.listar-roundicontext,
+.listar-roundicontext .listar-usericonholder,
+.listar-themedropdownmenu,
+.listar-featureicon i,
+.listar-sliderdots .owl-dot.active span,
+.listar-sliderdots .owl-dot:hover span,
+.listar-feature,
+.listar-feature i,
+.listar-feature h2,
+.listar-feature h2 span,
+.listar-shareicons,
+.listar-fixedtabnav,
+.listar-featuredimg,
+.listar-fixedheaderonscroll,
+.listar-wrapper,
+.listar-sidebarwrapper,
+.listar-reviews li,
+.listar-formusers .listar-tableusers tbody tr,
+.listar-categorybox,
+.listar-categorybox h3,
+.listar-cateicon,
+.listar-widgetcontent ul li{
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}

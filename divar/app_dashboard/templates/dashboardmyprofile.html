@@ -1,0 +1,150 @@
+{% extends 'shared/_Main.html' %}
+{% load static %}
+{% block content %}
+<div class="preloader-outer">
+    <div class="pin"></div>
+    <div class="pulse"></div>
+</div>
+<div id="listar-wrapper" class="listar-wrapper listar-haslayout">
+<main id="listar-main" class="listar-main listar-haslayout">
+    <!--************************************
+            Dashboard Banner Start
+    *************************************-->
+    <div class="listar-dashboardbanner">
+        <ol class="listar-breadcrumb">
+            <li><a href="javascript:void(0);">Home</a></li>
+            <li class="listar-active">My Profile</li>
+        </ol>
+        <h1>My Profile</h1>
+        <div class="listar-description">
+            <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra doloremque laudantium, totam rem aperiam</p>
+        </div>
+    </div>
+    <!--************************************
+            Dashboard Banner End
+    *************************************-->
+    <!--************************************
+            Dashboard Content Start
+    *************************************-->
+    <div id="listar-content" class="listar-content">
+        <form class="listar-formtheme listar-formaddlisting">
+            <fieldset>
+                <div class="listar-boxtitle">
+                    <h3>My Profile</h3>
+                </div>
+                <div class="listar-dashboardmyprofile">
+                    <figure class="listare-profilepic">
+                        <img src="images/profile-pic.jpg" alt="image description">
+                        <figcaption><a class="listar-btnuploadimg" href="javascript:void(0);"><i class="icon-upload2"></i>Upload Images</a></figcaption>
+                    </figure>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Your Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="John parker">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Email Address</label>
+                                <input type="email" name="email" class="form-control" placeholder="listingstar@gmail.com">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Phone Number</label>
+                                <input type="text" name="phonenumber" class="form-control" placeholder="013214577">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Website</label>
+                                <input type="url" name="yoururl" class="form-control" placeholder="www.yoursite.com">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group listar-dashboardfield">
+                                <label>About</label>
+                                <textarea placeholder="Write about yourself"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="listar-boxtitle">
+                    <h3>Social Connection</h3>
+                </div>
+                <div class="listar-dashboardsocial">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Facebook</label>
+                                <input type="text" name="name" class="form-control" placeholder="enter facebook profile url">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Twitter</label>
+                                <input type="email" name="email" class="form-control" placeholder="enter twitter profile url">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Linkedin</label>
+                                <input type="text" name="phonenumber" class="form-control" placeholder="enter linkedin profile url">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Google</label>
+                                <input type="url" name="yoururl" class="form-control" placeholder="enter google profile url">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Instagram</label>
+                                <input type="url" name="yoururl" class="form-control" placeholder="enter Instagram profile url">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Pinterest</label>
+                                <input type="url" name="yoururl" class="form-control" placeholder="enter pintrest profile url">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="listar-boxtitle">
+                    <h3>Update Password</h3>
+                </div>
+                <div class="listar-dashboardpassword">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>New Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="your new password">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <div class="form-group listar-dashboardfield">
+                                <label>Repeat Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="write again your new password">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <span>Enter same password in both fields Use an uppercase letter and a number for stronger password.</span>
+                            <a class="listar-btn listar-btngreen" href="javascript:void(0);">Update Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!--************************************
+                Dashboard Content End
+    *************************************-->
+</main>
+{% endblock %}

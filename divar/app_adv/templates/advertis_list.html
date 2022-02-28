@@ -1,0 +1,47 @@
+{% extends 'shared/_MainLayout.html' %}
+<!-- <title>{% block title %}{% endblock %}</title> -->
+{% load static %}
+{% load render_partial %}
+{% block content %}
+<section class="listar-sectionspace listar-haslayout">
+    <div class="col-sm-3" style="float:right; direction: rtl;width: 331px;">
+        <div class="listar-sectiontitle">
+            {% render_partial 'advertis_categories_partial' %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="width:1070px">
+                <div class="listar-sectionhead">
+                            {% include 'shared/search_advertis_input_component.html'  %}
+                            <div class="listar-sectiontitle"><h2>لیستی از اگهی های سایت </h2></div>
+                            <div class="listar-description"> <p>شما میتوانید اگهی های مورد نطر خود را در این سایت پیدا کنید</p></div>
+                </div>
+            </div>
+                        <div class="listar-themeposts listar-categoryposts" style="width:1070px;">                      
+                            {% for advertis in page_obj %}
+                                    {% include 'advertis_item_component.html' with advertis=advertis %}
+                            {% endfor %}
+                            <div class="clearfix"></div>
+                                <ul class="pagination">
+                                    {% if page_obj.has_previous %}
+                                        <li><a href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+                                    {% endif %}
+                                    {% for page in paginator.page_range %}
+                                        {% if page == page_obj.number %}
+                                            <li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+                                        {% else %}
+                                            <li><a href="?page={{ page }}">{{ page }}</a></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if page_obj.has_next %}
+                                        <li><a href="?page={{ page_obj.next_page_number }}">بعدی</a></li>
+                                    {% endif %}
+                                </ul>
+                        </div>                        
+         </div>
+           
+
+    </div>
+</section>
+{% endblock %}

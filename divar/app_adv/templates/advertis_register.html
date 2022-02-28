@@ -1,0 +1,457 @@
+{% extends 'shared/_Main.html' %}
+{% load static %}
+{% block content %}
+<style>
+	textarea, select, .listar-select select,
+	 .form-control, input[type="text"], input[type="password"],
+	  input[type="datetime"], input[type="datetime-local"],
+	   input[type="date"], input[type="month"], input[type="time"],
+	    input[type="week"], input[type="number"], input[type="email"],
+		 input[type="url"], input[type="search"], input[type="tel"],
+		  input[type="color"], .uneditable-input {width: 300px;}
+</style>
+	<div class="preloader-outer">
+		<div class="pin"></div>
+		<div class="pulse"></div>
+	</div>
+	<div id="listar-wrapper" class="listar-wrapper listar-haslayout">
+		<main id="listar-main" class="listar-main listar-haslayout">
+
+			<div class="listar-dashboardbanner">
+				<!-- <div class="listar-select">
+					<select id="listar-subscriptionchosen" class="listar-subscriptionchosen listar-chosendropdown">
+						<option value="">Select a Subscription</option>
+						<option value="">Select a Subscription</option>
+						<option value="">Select a Subscription</option>
+						<option value="">Select a Subscription</option>
+					</select>
+				</div> -->
+				<div class="listar-leftbox">
+					<ol class="listar-breadcrumb">
+						<li><a href="javascript:void(0);">صفحه اصلی</a></li>
+						<li class="listar-active">ثبت آگهی</li>
+					</ol>
+					<h1>ثبت آگهی</h1>
+					<div class="listar-description">
+						<p>جهت ثبت آگهی خود در وب سایت لطفا اطلاعات زیر را تکمیل نمایید</p>
+					</div>
+				</div>
+			</div>
+			<div id="listar-content" class="listar-content">
+				<form class="listar-formtheme listar-formaddlisting" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div id="listar-addlistingsteps" class="listar-addlistingsteps">
+						<section>
+							<fieldset>
+								<div class="listar-boxtitle">
+									<h3>اطلاعات مورد نیاز</h3>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<div class="form-group listar-dashboardfield">
+											<label>عنوان آگهی</label>
+											<!-- <label for="{{ advertis_form.title.id_for_label }}">{{ advertis_form.title.label }}</label> -->
+												
+											{{ form.title }}
+											
+										</div>
+										<div class="form-group listar-dashboardfield">
+											<label>قیمت</label>
+											<!--<label for="{{ advertis_form.description.id_for_label }}">{{form.description.label }}</label>-->
+											{{form.price }}
+											<div class="clearfix"></div>
+											
+										</div>
+										<div class="form-group listar-dashboardfield">
+											<label>شماره تماس</label>
+										   <!-- <label for="{{ advertis_form.phone.id_for_label }}">{{ form.phone_number.label }}</label> --> 
+										   {{ form.phone_number }}
+
+										   <!-- <input type="text" name="phone_number" class="form-control" placeholder="111 - 111 - 9870"> -->
+									   </div>
+									   <label>حذف شده/حذف نشده</label>
+											{{form.active}}
+									</div>	
+									<br>							
+									<!--<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<div class="form-group listar-dashboardfield">
+											<label>Video Url <span>(Viemo or Youtube)</span></label>
+											<input type="url" name="videourl" class="form-control" placeholder="//:http">
+										</div>
+									</div>-->
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<div class="form-group listar-dashboardfield">
+											<label >دسته بندی</label>
+											<!--<label for="{{ advertis_form.categories.id_for_label }}">{{ advertis_form.categories.label }}</label>-->
+											{{form.categories }}
+											
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<div class="form-group listar-dashboardfield">
+											<label>موقعیت(محل) </label>
+										<!--	<label for="{{ advertis_form.location.id_for_label }}">{{ advertis_form.location.label }}</label>
+											<input type="text" name="location" class="form-control" placeholder="Pakistan">-->
+											{{form.location }}
+
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+										<div class="form-group listar-dashboardfield">
+											<label>وب سایت </label>
+											<!--<label for="{{ advertis_form.website.id_for_label }}">{{form.website.label }}</label>-->
+											{{form.website }}
+											
+										</div>
+									</div>
+									
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+										<div class="form-group listar-dashboardfield">
+											<label>توضیحات تکمیلی</label>
+											<!--<label for="{{ advertis_form.description.id_for_label }}">{{form.description.label }}</label>-->
+											{{form.description }}
+											<div class="clearfix"></div>
+											
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+										 <div class="form-group listar-dashboardfield">
+											<!-- <label>گالری</label> -->
+											<label for="{{ advertis_form.image.id_for_label }}">{{form.image.label }}</label>
+											{{form.image}}
+																	 
+										
+											<button class="listar-btn listar-btngreen" style="margin: 20px;">ثبت آگهی</button>
+										</fieldset>
+			
+									</section>
+					</div>
+											<!--<label class="listar-fileuploadlabel" for="listar-photogallery">
+												<span>بکشید و رها کنید</span>
+												<span>یا</span>
+												<span class="listar-btn">Browser Files</span>
+												<input id="listar-photogallery" class="listar-fileinput" type="file" name="file">
+											</label>
+										</div>
+									</div>
+									<!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="form-group listar-dashboardfield">
+											<label>امکانات</label>
+											<ul class="listar-amenities">
+												<li><a href="javascript:void(0);">Pets Allowed</a></li>
+												<li><a href="javascript:void(0);">اینترنت</a></li>
+												<li><a href="javascript:void(0);">Family &amp; Friends</a></li>
+												<li><a href="javascript:void(0);">تلویزیون</a></li>
+												<li><a href="javascript:void(0);">محیط بازی</a></li>
+											</ul>
+										</div>
+									</div>-->
+								</div>
+								
+					<!--	<div class="listar-steptitle"><em>موقعیت</em></div>
+						<section>
+							<fieldset>
+								<div class="listar-boxtitle">
+									<h3>لوکیشن</h3>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+										<div class="form-group listar-dashboardfield">
+											<label>آدرس</label>
+											<input type="text" name="website" class="form-control" placeholder="جستجوی ادرس">
+										</div>
+										<iframe class="listar-postlocationmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.194140973736!2d144.95846281578753!3d-37.80892137975326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d34d2754a9f%3A0xad27583c2c9e2890!2sElizabeth+St%2C+Melbourne+VIC+3000%2C+Australia!5e0!3m2!1sen!2s!4v1509393269805"></iframe>
+									</div>
+								</div>
+							</fieldset>
+						</section>
+						<div class="listar-steptitle"><em>قیمت</em></div>
+						<section>
+							<fieldset>
+								<div class="listar-boxtitle">
+									<h3>قیمت گذاری</h3>
+								</div>
+								<div class="row">
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+										<div class="form-group listar-dashboardfield">
+											<label>قیمت</label>
+											<div class="listar-select">
+												<select>
+													<option>Not to say</option>
+													<option>Not to say</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+										<div class="form-group listar-dashboardfield">
+											<label>پایین ترین قیمت</label>
+											<input type="text" name="name" class="form-control" placeholder="Salt &amp; Pepper Restaurant">
+										</div>
+									</div>
+									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+										<div class="form-group listar-dashboardfield">
+											<label>بالاترین قیمت</label>
+											<input type="text" name="name" class="form-control" placeholder="Salt &amp; Pepper Restaurant">
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="listar-boxtitle">
+									<h3>قیمت</h3>
+								</div>
+								<div class="row">
+									<ul id="listar-sortable" class="listar-sortable">
+										<li class="listar-slot">
+											<span class="listar-arangeslot"><img src="{% static 'images/icons/icon-09.jpg'%}" alt="image description"></span>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+												<div class="form-group listar-dashboardfield">
+													<label>عنوان</label>
+													<input type="text" name="title" class="form-control" placeholder="Title">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+												<div class="form-group listar-dashboardfield">
+													<label>توضیحات</label>
+													<input type="text" name="description" class="form-control" placeholder="Desctiption">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+												<div class="form-group listar-dashboardfield">
+													<label>عکس</label>
+													<input type="text" name="name" class="form-control">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+												<div class="form-group listar-dashboardfield">
+													<label>قیمت</label>
+													<div class="listar-inputwithicon">
+														<span>USD</span>
+														<input type="text" name="name" class="form-control" placeholder="Price">
+													</div>
+												</div>
+											</div>
+											<span class="listar-btndelete"><i class="icon-icons88"></i></span>
+										</li>
+										<li class="listar-slot">
+											<span class="listar-arangeslot"><img src="{% static 'images/icons/icon-09.jpg'%}" alt="image description"></span>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+												<div class="form-group listar-dashboardfield">
+													<label>Title</label>
+													<input type="text" name="title" class="form-control" placeholder="Title">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+												<div class="form-group listar-dashboardfield">
+													<label>Desctiption</label>
+													<input type="text" name="description" class="form-control" placeholder="Desctiption">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+												<div class="form-group listar-dashboardfield">
+													<label>Image</label>
+													<input type="text" name="name" class="form-control">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+												<div class="form-group listar-dashboardfield">
+													<label>Price</label>
+													<div class="listar-inputwithicon">
+														<span>USD</span>
+														<input type="text" name="name" class="form-control" placeholder="Price">
+													</div>
+												</div>
+											</div>
+											<span class="listar-btndelete"><i class="icon-icons88"></i></span>
+										</li>
+										<li class="listar-slot">
+											<span class="listar-arangeslot"><img src="{% static 'images/icons/icon-09.jpg'%}" alt="image description"></span>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+												<div class="form-group listar-dashboardfield">
+													<label>Title</label>
+													<input type="text" name="title" class="form-control" placeholder="Title">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
+												<div class="form-group listar-dashboardfield">
+													<label>Desctiption</label>
+													<input type="text" name="description" class="form-control" placeholder="Desctiption">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+												<div class="form-group listar-dashboardfield">
+													<label>Image</label>
+													<input type="text" name="name" class="form-control">
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+												<div class="form-group listar-dashboardfield">
+													<label>Price</label>
+													<div class="listar-inputwithicon">
+														<span>USD</span>
+														<input type="text" name="name" class="form-control" placeholder="Price">
+													</div>
+												</div>
+											</div>
+											<span class="listar-btndelete"><i class="icon-icons88"></i></span>
+										</li>
+									</ul>
+									<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+										<div class="listar-btnarea">
+											<div class="form-group listar-dashboardfield">
+												<a class="listar-btnadd" href="javascript:void(0);">+</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</section>
+						<div class="listar-steptitle"><em>ساعات کاری</em></div>
+						<section>
+							<fieldset>
+								<div class="listar-boxtitle">
+									<h3>ساعات کاری</h3>
+								</div>
+								<div class="row">
+									<ul class="listar-businesshours">
+										<li>
+											<label>شنبه</label>
+											<div class="listar-select">
+												<select>
+													<option>شروع ساعت کاری</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>پایان ساعت کاری</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label>Tuesday</label>
+											<div class="listar-select">
+												<select>
+													<option>Opening Time</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>Closing Time</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label>Wednesday</label>
+											<div class="listar-select">
+												<select>
+													<option>Opening Time</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>Closing Time</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label>Thursday</label>
+											<div class="listar-select">
+												<select>
+													<option>Opening Time</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>Closing Time</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label>Friday</label>
+											<div class="listar-select">
+												<select>
+													<option>Opening Time</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>Closing Time</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label>Saturday</label>
+											<div class="listar-select">
+												<select>
+													<option>Opening Time</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>Closing Time</option>
+												</select>
+											</div>
+										</li>
+										<li>
+											<label>Sunday</label>
+											<div class="listar-select">
+												<select>
+													<option>Opening Time</option>
+												</select>
+											</div>
+											<div class="listar-select">
+												<select>
+													<option>Closing Time</option>
+												</select>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</fieldset>
+						</section>
+						<div class="listar-steptitle"><em>اضافه کردن جزییات</em></div>
+						<section>
+							<fieldset>
+								<div class="listar-boxtitle">
+									<h3>اضافه کردن جزییات</h3>
+								</div>
+								<div class="row">
+									<div class="listar-slot">
+										<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+											<div class="form-group listar-dashboardfield">
+												<label>برچسب</label>
+												<input type="text" name="title" class="form-control" placeholder="Take Out">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+											<div class="form-group listar-dashboardfield">
+												<label>مقدار</label>
+												<input type="text" name="description" class="form-control" placeholder="Yes">
+											</div>
+										</div>
+										<a class="listar-btndelete" href="javascript:void(0);"><i class="icon-icons88"></i></a>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+									<!--	<div class="listar-btnarea">
+											<div class="form-group listar-dashboardfield">
+												<a class="listar-btnadd" href="javascript:void(0);">+</a>
+											</div>
+										</div>
+									</div>-->
+								</div>
+							</fieldset>
+						</section>
+					
+					</div>
+				</form>
+			</div>
+
+		</main>
+		
+		
+{% endblock %}
+

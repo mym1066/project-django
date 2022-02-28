@@ -1,0 +1,216 @@
+{% load static %}
+{% load render_partial %}
+<sidebar id="listar-dashboardheader" class="listar-dashboardheader listar-haslayout">
+    <div class="cd-auto-hide-header listar-haslayout">
+        <div class="container-fluid">
+            <div class="row">
+                <strong class="listar-logo" style="display: none;"><a href="/"><img src="{% static 'images/logo1.png'%}" alt="company logo here"></a></strong>
+                <nav class="listar-addnav">
+                    <ul>
+                        <li>
+                            <div class="dropdown listar-dropdown">
+                                <a class="listar-userlogin listar-btnuserlogin" href="javascript:void(0);" id="listar-dropdownuser" data-toggle="dropdown">
+                                    <span><img src="{% static 'images/logo1.png' %}" alt="image description"></span>
+                                    <em>{{request.user.username}}</em>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <div class="dropdown-menu listar-dropdownmen" aria-labelledby="listar-dropdownuser">
+                                    <ul>
+                                        <li>
+                                            <a href="/dashboard">
+                                                <i class="icon-speedometer2"></i>
+                                                <span>پیشخوان</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/#">
+                                                <!-- <a href="/dashboardlisting"> -->
+                                                <i class="icon-layers"></i>
+                                                <span>لیست های من</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/#">
+                                                <!-- <a href="/dashboardmyprofile"> -->
+                                                <i class="icon-user2"></i>
+                                                <span>حساب کاربری من</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/log-out">
+                                                <i class="icon-lock6"></i>
+                                                <span>خروج</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="listar-btn listar-btngreen" href="/advertis_register">
+                                <i class="icon-plus"></i>
+                                <span>افزودن به لیست </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="listar-nav" class="listar-nav">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#listar-navigation" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="listar-navigation" class="collapse navbar-collapse listar-navigation">
+                        <ul>
+                            <li class="menu-item-has-children current-menu-item">
+                                <a href="/">صفحه اصلی</a>
+                            </li>
+                            <li class="menu-item-has-children">
+                                
+                                <a href="/advertis">(لیست اگهی ها)جستجو</a>
+                                
+                            </li>
+                          <!--  <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">صفحات</a>
+                                <ul class="sub-menu">
+                                    <li><a href="howitwork.html">چگونه کار میکند</a></li>
+                                    <li><a href="services.html">سرویس ها</a></li>
+                                    <li><a href="pkgprice.html">پکیج ها</a></li>
+                                    <li><a href="testimonials.html">گواهینامه ها</a></li>
+                                    <li><a href="contactus.html">تماس با ما</a></li>
+                                    <li><a href="404error.html">ارور 404</a></li>
+                                    <li><a href="comingsoon.html">به زودی</a></li>
+                                </ul>
+                            </li>
+                           <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">اخبار</a>
+                                <ul class="sub-menu">
+                                    <li><a href="newsv1.html">استاندارد وبلاگ</a></li>
+                                    <li><a href="newsv2.html">وبلاگ کلاسیک</a></li>
+                                    <li><a href="newsv3.html">نوار کناری وبلاگ</a></li>
+                                </ul>
+                            </li>--> 
+                            {% if  request.user.is_authenticated %}
+
+                            <!--<li><a href="/dashboard">صفحه من</a></li>-->
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">دیوار من</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">نشان شده</a></li>
+                                    <!-- <li><a href="/dashboardwishlist">نشان شده</a></li> -->
+                                   <!-- <li><a href="#">یادداشت</a></li>
+                                    <li><a href="#">دیوار برای کسب و کار</a></li>-->
+                                     <li><a href="/#">بازدیدهای اخیر</a></li>
+                                     <!-- <li><a href="/dashboardreviews">بازدیدهای اخیر</a></li> -->
+                                </ul>
+                                
+                            </li>
+                            <div id="listar-navigation" class="collapse navbar-collapse listar-navigation">
+                                
+                            </div>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="listar-sidebarwrapper" class="listar-sidebarwrapper">
+        <strong class="listar-logo" style="display: none;"><a href="/"><img src="{% static 'images/logo1.png' %}" alt="company logo here"></a></strong>
+        <span id="listar-btnmenutoggle" style="display: none;" class="listar-btnmenutoggle"  style="display: none;"><i class="fa fa-angle-left"></i></span>
+        <div id="listar-verticalscrollbar" class="listar-verticalscrollbar">
+            <nav id="listar-navdashboard" class="listar-navdashboard" style="border: outset;margin-top: 20px;" >
+                <br> <br>
+                <div class="listar-menutitle">
+                    <!-- <span>دسته ها</span> -->
+                </div>
+                <div class="listar-sectiontitle" style="margin: 0 0 0;">
+                    {% render_partial 'advertis_categories_partial' %}
+                
+               <!-- <ul>
+                    <li class="listar-active">
+                       
+                        <a href="dashboard">
+                            <i class="icon-pencil3"></i>
+                            <span>املاک</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardusers">
+                            <i class="icon-pencil3"></i>
+                            <span>وسایل نقلیه</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardlisting">
+                            <i class="icon-pencil3"></i>
+                            <span>کالای دیجیتان</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardreviews">
+                            <i class="icon-pencil3"></i>
+                            <span>خانه و آشپزخانه</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardwishlist">
+                            <i class="icon-pencil3"></i>
+                            <span>خدمات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardaddlisting">
+                            <i class="icon-pencil3"></i>
+                            <span>وسایل شخصی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardaddlisting">
+                            <i class="icon-pencil3"></i>
+                            <span>سرگرمی و فراغت</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardaddlisting">
+                            <i class="icon-pencil3"></i>
+                            <span>اجتماعی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardaddlisting">
+                            <i class="icon-pencil3"></i>
+                            <span> تجهیزات و صنعتی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboardaddlisting">
+                            <i class="icon-pencil3"></i>
+                            <span>استخدام و کاریابی</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="listar-menutitle listar-menutitleaccount"><span>حساب کاربری </span></div>
+                <ul>-->
+                    <li>
+                        <a href="/dashboardmyprofile">
+                            <i class="icon-lock6"></i>
+                            <span>حساب کاربری من</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="/dashboard-profile-setting.html">
+                            <i class="icon-user4"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li> 
+                </ul>
+            </nav>
+          
+        </div>
+    </div>
+</sidebar>

@@ -1,0 +1,128 @@
+{% extends 'shared/_MainLayout.html' %}
+{% block content %}
+<!-- <style>
+    input[type=email],
+    input[type=date], 
+    input[type=search], input[type=number], 
+    input[type=text], input[type=tel], input[type=url],
+     input[type=password]{
+    padding: 23px;
+    border-radius: 23px;
+    box-shadow: none;
+    text-align: center;
+    }
+
+</style> -->
+<div class="listar-logincontent"><a>
+</a><div class="listar-themetabs"><a>
+    </a>
+    <br>
+    <div class="tab-content listar-tabcontentloginregistered" style="text-align: center;">
+        <h2 style="margin: 0px 0 42px;">ثبت نام کاربـر جدیـد</h2>
+
+        <div role="tabpanel" class="tab-pane fade active in" id="listar-register">
+            <form class="listar-formtheme listar-formlogin" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <div class="form-group listar-inputwithicon"style="width:300px;float: right;margin-right: 700px;text-align: center;">
+                       
+                        <label for="{{ register_form.user_name.id_for_label }}">{{ register_form.user_name.label }}</label>
+                            {{ register_form.user_name }}
+                            {% for error in register_form.user_name.errors %}
+                                <p style="color: red;">{{ error }}</p>
+                            {% endfor %}
+                        <!-- <input type="text" name="username" class="form-control" placeholder="نام کاربری"> -->
+                    </div>
+                    <div class="form-group listar-inputwithicon" style="width: 300px;float: right;margin-right: 700px;text-align: center;">
+                       
+                        <label for="{{ register_form.email.id_for_label }}">{{ register_form.email.label }}</label>
+                        {{ register_form.email }}
+                        {% for error in register_form.email.errors %}
+                            <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+                        <!-- <input type="email" name="emailaddress" class="form-control" placeholder="ایمیل ">-->
+                    </div>
+                    <div class="form-group listar-inputwithicon"style="width: 300px;float: right;margin-right: 700px;text-align: center;">
+                        
+                        <label for="{{ register_form.password.id_for_label }}">{{ register_form.password.label }}</label>
+                        {{ register_form.password }}
+                        {% for error in register_form.password.errors %}
+                            <p style="color: red;">{{ error }}</p>
+                        {% endfor %}
+                       <!-- <input type="password" name="password" class="form-control" placeholder="رمز عبور">-->
+                    </div>
+                    <div class="form-group listar-inputwithicon"style="width: 300px;float: right;margin-right: 700px;text-align: center;">
+                        <label for="{{ register_form.re_password.id_for_label }}">{{ register_form.re_password.label }}</label>
+                            {{ register_form.re_password }}
+                            {% for error in register_form.re_password.errors %}
+                                <p style="color: red;">{{ error }}</p>
+                            {% endfor %}
+                        <!--<input type="password" name="confirmpassword" class="form-control" placeholder="تکرار رمز عبور">-->
+                    </div>
+                    <button class="listar-btn listar-btngreen" style="    width: 683px;">ثبت نام</button>
+
+                
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+
+
+<link rel='stylesheet' id='select2-css' href='https://webkima.com/wp-content/plugins/woocommerce/assets/css/select2.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wpast-styles-css' href='https://webkima.com/wp-content/plugins/wp-advanced-support-ticket/assets/css/styles.css?ver=13.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wpast-styles-rtl-css' href='https://webkima.com/wp-content/plugins/wp-advanced-support-ticket/assets/css/rtl.css?ver=13.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='woo-wallet-style-rtl-css' href='https://webkima.com/wp-content/plugins/woo-wallet/assets/css/frontend-rtl.css?ver=1.3.22' type='text/css' media='all' />
+<link rel='stylesheet' id='woo-wallet-payment-jquery-ui-css' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css?ver=1.12.1' type='text/css' media='' />
+<link rel='stylesheet' id='dashicons-css' href='https://webkima.com/wp-includes/css/dashicons.min.css?ver=14e7aef3e674f5928b125619481d8afc' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-datatables-style-css' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css?ver=14e7aef3e674f5928b125619481d8afc' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-datatables-responsive-style-css' href='//cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css?ver=14e7aef3e674f5928b125619481d8afc' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-main-rtl-css' href='https://webkima.com/wp-content/themes/flatsome/assets/css/flatsome-rtl.css?ver=3.14.1' type='text/css' media='all' />
+<style id='flatsome-main-inline-css' type='text/css'>
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://webkima.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.14.1);
+				src:
+					url(https://webkima.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.14.1) format("embedded-opentype"),
+					url(https://webkima.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.14.1) format("woff2"),
+					url(https://webkima.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.14.1) format("truetype"),
+					url(https://webkima.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.14.1) format("woff"),
+					url(https://webkima.com/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.14.1#fl-icons) format("svg");
+			}
+</style>
+<link rel='stylesheet' id='flatsome-shop-rtl-css' href='https://webkima.com/wp-content/themes/flatsome/assets/css/flatsome-shop-rtl.css?ver=3.14.1' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-style-css' href='https://webkima.com/wp-content/themes/flatsome-child/style.css?ver=3.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://webkima.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' id='zxcvbn-async-js-extra'>
+</script>
+<script type='text/javascript' src='https://webkima.com/wp-includes/js/zxcvbn-async.min.js?ver=1.0' id='zxcvbn-async-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?hl=fa&#038;ver=14e7aef3e674f5928b125619481d8afc' id='wpast-recaptcha-js'></script>
+<script type='text/javascript' src='https://webkima.com/wp-content/plugins/wp-notification-bars/public/js/wp-notification-bars-public.js?ver=1.0.11' id='wp-notification-bars-js'></script>
+<script type='text/javascript' src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js?ver=14e7aef3e674f5928b125619481d8afc' id='jquery-datatables-script-js'></script>
+<script type='text/javascript' src='//cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js?ver=14e7aef3e674f5928b125619481d8afc' id='jquery-datatables-responsive-script-js'></script>
+<script type='text/javascript' id='wc-endpoint-wallet-js-extra'>
+/* <![CDATA[ */
+var wallet_param = {"ajax_url":"https:\/\/webkima.com\/wp-admin\/admin-ajax.php","transaction_table_nonce":"3e6e836ffd","search_by_user_email":"1","i18n":{"emptyTable":"\u0647\u06cc\u0686 \u062a\u0631\u0627\u06a9\u0646\u0634\u06cc \u067e\u06cc\u062f\u0627 \u0646\u0634\u062f","lengthMenu":"\u0646\u0645\u0627\u06cc\u0634 _MENU_ \u0645\u0648\u0631\u062f","info":"\u0646\u0645\u0627\u06cc\u0634 _START_  \u0628\u0647 _END_  \u0627\u0632 _TOTAL_  \u0645\u0648\u0631\u062f","infoFiltered":"(\u0641\u06cc\u0644\u062a\u0631 \u0634\u062f\u0647 \u0627\u0632 \u0645\u062c\u0645\u0648\u0639 _MAX_ \u0645\u0648\u0631\u062f)","infoEmpty":"\u0646\u0645\u0627\u06cc\u0634 0 \u062a\u0627 0 \u0627\u0632 0 \u0648\u0631\u0648\u062f\u06cc","paginate":{"first":"\u0627\u0648\u0644\u06cc\u0646","last":"\u0622\u062e\u0631\u06cc\u0646","next":"\u0628\u0639\u062f\u06cc","previous":"\u0642\u0628\u0644\u06cc"},"non_valid_email_text":"\u0644\u0637\u0641\u0627 \u06cc\u06a9 \u0627\u06cc\u0645\u06cc\u0644 \u0645\u0639\u062a\u0628\u0631 \u0648\u0627\u0631\u062f \u06a9\u0646\u06cc\u062f","no_resualt":"\u0646\u062a\u06cc\u062c\u0647 \u0627\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f","zeroRecords":"\u0647\u06cc\u0686 \u0631\u06a9\u0648\u0631\u062f\u06cc \u0645\u0646\u0637\u0628\u0642\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f","inputTooShort":"\u0644\u0637\u0641\u0627 3 \u06cc\u0627 \u0628\u06cc\u0634\u062a\u0631 \u0627\u0632 3 \u06a9\u0627\u0631\u0627\u06a9\u062a\u0631 \u0648\u0627\u0631\u062f \u0646\u0645\u0627\u06cc\u06cc\u062f","searching":"\u062f\u0631 \u062d\u0627\u0644 \u062c\u0633\u062a\u062c\u0648 \u2026","processing":"\u062f\u0631 \u062d\u0627\u0644 \u067e\u0631\u062f\u0627\u0632\u0634...","search":"\u062c\u0633\u062a\u062c\u0648 \u0628\u0631 \u0627\u0633\u0627\u0633 \u062a\u0627\u0631\u06cc\u062e:","placeholder":"yyyy-mm-dd"},"columns":[{"data":"id","title":"\u0634\u0646\u0627\u0633\u0647","orderable":false},{"data":"credit","title":"\u0627\u0641\u0631\u0627\u06cc\u0634 \u0645\u0628\u0644\u063a","orderable":false},{"data":"debit","title":"\u06a9\u0633\u0631 \u0645\u0628\u0644\u063a","orderable":false},{"data":"details","title":"\u062c\u0632\u06cc\u06cc\u0627\u062a","orderable":false},{"data":"date","title":"\u062a\u0627\u0631\u06cc\u062e","orderable":false}]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://webkima.com/wp-content/plugins/woo-wallet/assets/js/frontend/wc-endpoint-wallet.min.js?ver=1.3.22' id='wc-endpoint-wallet-js'></script>
+<meta name="wpast-nonce" content="4b7c1a71b1"><style type="text/css">.wpast-wrap.wpast-view-ticket .wpast-start-ticket .wpast-ticket-content p{font-size: 1.2em !important;}
+
+</style>
+<style type="text/css">
+.wpast-wrap.wpast-view-ticket .wpast-main-content .wpast-ticket.wpast-from-admin .wpast-ticket-content {background: #e0f7fa}.wpast-wrap.wpast-view-ticket .wpast-main-content .wpast-ticket.wpast-from-admin .wpast-ticket-content, .wpast-wrap.wpast-view-ticket .wpast-main-content .wpast-ticket.wpast-from-admin .wpast-ticket-content a {color: #000000}.wpast-wrap.wpast-view-ticket .wpast-main-content .wpast-ticket.wpast-from-vendor .wpast-ticket-content {background: #e0f7fa}</style>
+<link rel="preload" as="font" href="https://webkima.com/wp-content/themes/flatsome-child/dana/dana-fanum-regular.woff" crossorigin>
+<link rel="preload" as="font" href="https://webkima.com/wp-content/themes/flatsome-child/dana/dana2webGX.woff" crossorigin><!--[if IE]><link rel="stylesheet" type="text/css" href="https://webkima.com/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://webkima.com/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]--> <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+<link rel="icon" href="https://webkima.com/wp-content/uploads/2021/07/New-Mini-Webkima-Logo.svg" sizes="32x32" />
+<link rel="icon" href="https://webkima.com/wp-content/uploads/2021/07/New-Mini-Webkima-Logo.svg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://webkima.com/wp-content/uploads/2021/07/New-Mini-Webkima-Logo.svg" />
+<meta name="msapplication-TileImage" content="https://webkima.com/wp-content/uploads/2021/07/New-Mini-Webkima-Logo.svg" />
+<style id="custom-css" type="text/css">:root {--primary-color: #7c4dff;}.full-width .ubermenu-nav, .container, .row{max-width: 1270px}.row.row-collapse{max-width: 1240px}.row.row-small{max-width: 1262.5px}.row.row-large{max-width: 1300px}.header-main{height: 75px}#logo img{max-height: 75px}#logo{width:150px;}#logo a{max-width:200px;}.stuck #logo img{padding:7px 0;}.header-bottom{min-height: 55px}.header-top{min-height: 32px}.transparent .header-main{height: 260px}.transparent #logo img{max-height: 260px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 290px;}.header.show-on-scroll,.stuck .header-main{height:50px!important}.stuck #logo img{max-height: 50px!important}.search-form{ width: 100%;}.header-bottom {background-color: #f1f1f1}.top-bar-nav > li > a{line-height: 16px }.header-main .nav > li > a{line-height: 16px }.stuck .header-main .nav > li > a{line-height: 10px }@media (max-width: 549px) {.header-main{height: 60px}#logo img{max-height: 60px}}.main-menu-overlay{background-color: #000000}.nav-dropdown{border-radius:3px}.nav-dropdown{font-size:90%}.header-top{background-color:#1a237e!important;}.blog-wrapper{background-color: #f8f9fb;}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #7c4dff;}/* Color !important */[data-text-color="primary"]{color: #7c4dff!important;}/* Background Color */[data-text-bg="primary"]{background-color: #7c4dff;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #7c4dff;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #7c4dff}.nav-tabs > li.active > a{border-top-color: #7c4dff}.widget_shopping_cart_content .blockUI.blockOverlay:before { border-left-color: #7c4dff }.woocommerce-checkout-review-order .blockUI.blockOverlay:before { border-left-color: #7c4dff }/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #7c4dff;}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button, .current .breadcrumb-step{ background-color:#1a237e; }[data-text-bg="secondary"]{background-color: #1a237e;}/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #1a237e}/* Color !important */[data-text-color="secondary"]{color: #1a237e!important;}/* Border */.secondary.is-outline:hover{border-color:#1a237e}.success.is-underline:hover,.success.is-outline:hover,.success{background-color: #04c4c9}.success-color, .success.is-link, .success.is-outline{color: #04c4c9;}.success-border{border-color: #04c4c9!important;}/* Color !important */[data-text-color="success"]{color: #04c4c9!important;}/* Background Color */[data-text-bg="success"]{background-color: #04c4c9;}.alert.is-underline:hover,.alert.is-outline:hover,.alert{background-color: #551bf8}.alert.is-link, .alert.is-outline, .color-alert{color: #551bf8;}/* Color !important */[data-text-color="alert"]{color: #551bf8!important;}/* Background Color */[data-text-bg="alert"]{background-color: #551bf8;}body{font-family:"Lato", sans-serif}body{font-weight: 400}body{color: #343352}.nav > li > a {font-family:"Lato", sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family:"Lato", sans-serif;}.nav > li > a {font-weight: 0;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Lato", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font{color: #1a237e;}.breadcrumbs{text-transform: none;}button,.button{text-transform: none;}.nav > li > a, .links > li > a{text-transform: none;}.section-title span{text-transform: none;}h3.widget-title,span.widget-title{text-transform: none;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font{font-weight: 400!important;}.header:not(.transparent) .header-nav-main.nav > li > a:hover,.header:not(.transparent) .header-nav-main.nav > li.active > a,.header:not(.transparent) .header-nav-main.nav > li.current > a,.header:not(.transparent) .header-nav-main.nav > li > a.active,.header:not(.transparent) .header-nav-main.nav > li > a.current{color: #1a237e;}.header-nav-main.nav-line-bottom > li > a:before,.header-nav-main.nav-line-grow > li > a:before,.header-nav-main.nav-line > li > a:before,.header-nav-main.nav-box > li > a:hover,.header-nav-main.nav-box > li.active > a,.header-nav-main.nav-pills > li > a:hover,.header-nav-main.nav-pills > li.active > a{color:#FFF!important;background-color: #1a237e;}a{color: #1a237e;}a:hover{color: #551bf8;}.tagcloud a:hover{border-color: #551bf8;background-color: #551bf8;}.shop-page-title.featured-title .title-overlay{background-color: rgba(0,0,0,0.3);}.current .breadcrumb-step, [data-icon-label]:after, .button#place_order,.button.checkout,.checkout-button,.single_add_to_cart_button.button{background-color: #4caf50!important }.has-equal-box-heights .box-image {padding-top: 100%;}.badge-inner.on-sale{background-color: #4203f5}.star-rating span:before,.star-rating:before, .woocommerce-page .star-rating:before, .stars a:hover:after, .stars a.active:after{color: #ffb300}.price del, .product_list_widget del, del .woocommerce-Price-amount { color: #7c4dff; }ins .woocommerce-Price-amount { color: #1a237e; }input[type='submit'], input[type="button"], button:not(.icon), .button:not(.icon){border-radius: 4px!important}.pswp__bg,.mfp-bg.mfp-ready{background-color: rgba(0,0,0,0.5)}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 247px!important;width: 247px!important;}}.footer-1{background-color: #1a237e}.footer-2{background-color: #1a237e}.absolute-footer, html{background-color: #000035}.label-new.menu-item > a:after{content:"جدید";}.label-hot.menu-item > a:after{content:"جدید";}.label-sale.menu-item > a:after{content:"حراج";}.label-popular.menu-item > a:after{content:"محبوب";}</style> <style type="text/css" id="wp-custom-css">
+	</style>
+</head>
+
+{% endblock %}

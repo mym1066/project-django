@@ -1,0 +1,180 @@
+/*==========================================================================================
+								Primery Theme Colors										
+==========================================================================================*/
+/*=============================================
+			Theme Text Color
+=============================================*/
+a,
+p a,
+p a:hover,
+a:hover,
+a:focus,
+a:active,
+.listar-stars span:after,
+.sub-menu li:hover > a,
+.listar-tabnavloginregistered li.active a,
+.listar-tabnavloginregistered li:hover a,
+.listar-greenthemecolor,
+.listar-testimonial blockquote h5,
+.listar-breadcrumb li a:hover,
+.listar-breadcrumb li.listar-active span,
+.listar-pricingplanfoot .listar-btn,
+.listar-formlogin .form-group span a:hover,
+.listar-listingvtwo .listar-btnquickinfo.listar-liked,
+.listar-pricebox h3 i,
+.listar-detailvtwo .listar-themepostfoot ul li span span,
+.listar-navigation ul li.current-menu-item,
+.listar-navigation ul li.current-menu-item > a,
+.listar-navfooter ul li a:hover,
+.listar-navfooter ul li:hover a,
+.menu-item-has-children .menu-item-has-children > li:hover > a:before,
+.menu-item-has-children .menu-item-has-children > a:hover:before,
+.listar-pricingplan:first-child .listar-planicon i { color: #f84a47; }
+/*=============================================
+			Theme Background Color
+=============================================*/
+.listar-dropdowarrow,
+.navbar-toggle,
+.listar-btngreen,
+.listar-btngreen:hover,
+.listar-btncartdropdown em,
+.listar-tabnavloginregistered li a:before,
+.listar-btnplay,
+.listar-postcategory,
+.listar-pricingplanfoot .listar-btn:hover,
+.listar-formarea .listar-formnewsletter fieldset button,
+.pin,
+.listar-advancefitures .listar-checkbox input[type=checkbox]:checked + label:before,
+.listar-pagination ul li a:hover,
+.listar-tagcategory,
+/* .listar-listingvtwo .listar-postverified,
+.listar-listingvtwo .listar-placespost .tooltip-inner */
+.listar-addlistingsteps .actions ul li a,
+.listar-pagination ul li a:hover,
+.listar-pagination ul li.listar-active a,
+.listar-btndelpost:hover,
+.listar-testimonialsvthree .owl-item:nth-child(even) .listar-testimonial blockquote{ background:#f84a47; }
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background:#f84a47 !important; }
+/*=============================================
+			Theme Border Color
+=============================================*/
+input:focus,
+.select select:focus,
+.form-control:focus,
+.listar-btngreen,
+.listar-btngreen:hover,
+.listar-advancefitures .listar-checkbox input[type=checkbox]:checked + label:before,
+.listar-pagination ul li a:hover,
+blockquote,
+.listar-addlistingsteps .actions ul li a,
+.listar-pagination ul li a:hover,
+.listar-pagination ul li.listar-active a,
+.listar-btndelpost:hover,
+.listar-testimonialsvthree .owl-item:nth-child(even) .listar-testimonial blockquote:before { border-color: #f84a47; }
+.pulse:after {
+	-webkit-box-shadow: 0 0 1px 2px #f84a47;
+	box-shadow: 0 0 1px 2px #f84a47;
+}
+/* .listar-listingvtwo .listar-placespost .tooltip.top .tooltip-arrow{ border-top-color: #f84a47; } */
+/*==========================================================================================
+								Secondary Theme Colors										
+==========================================================================================*/
+/*=============================================
+			Theme Text Color
+=============================================*/
+.listar-categorieschosen + .chosen-container .chosen-results li:before,
+.listar-bluethemecolor,
+.listar-bluethemecolor:hover,
+.listar-bluethemecolor:focus,
+.listar-btnquickinfo.listar-liked,
+.listar-placespost:hover .listar-location,
+.listar-category:hover,
+.listar-category:focus,
+.listar-category:active,
+.listar-category:hover i,
+.listar-category:focus i,
+.listar-category:active i,
+.listar-category:hover span,
+.listar-category:focus span,
+.listar-category:active span,
+.listar-listfeatures li:before,
+.listar-testimonial .listar-testimonialholder h3,
+.listar-feature:hover > i,
+.listar-feature:hover > i:before,
+.listar-feature:hover > h2,
+.listar-location:hover,
+.listar-location:hover i,
+.listar-location:hover i:before,
+.listar-location:hover em,
+.listar-btnquickinfo:hover,
+.listar-btnquickinfo:focus,
+.listar-btnquickinfo:hover > i,
+.listar-btnquickinfo:focus > i,
+.listar-btnshare:hover,
+.listar-btnshare:focus,
+.listar-btnshare:hover i,
+.listar-btnshare:focus i,
+.listar-themetabnav li.active a,
+.listar-amenities li:before,
+.listar-commentcontent time i,
+.listar-widgettitle h3 i,
+.listar-dollars span:after,
+.listar-views li a:hover,
+.listar-views li a:hover i,
+.listar-views li.listar-active a,
+.listar-views li.listar-active a i,
+.listar-detailvtwo .listar-fixedtabnav .listar-themetabnav li.listar-active a,
+.listar-addlistingsteps .steps ul li.done a,
+.listar-addlistingsteps .steps ul li.current a,
+.listar-dropdownmen ul li:hover a
+.listar-dropdownmen ul li a:hover,
+.listar-dropdownmen ul li a:hover i,
+.listar-dropdownmen ul li a:hover span,
+.listar-categorytitle h3,
+.listar-categorybox:hover .listar-cateicon,
+.listar-planicon i { color: #f9b42b; }
+/*=============================================
+			Theme Background Color
+=============================================*/
+.listar-btnblue,
+.listar-btnblue:hover,
+.chosen-container .chosen-results li.highlighted,
+.chosen-container .chosen-results li:hover,
+.slider-selection,
+.slider-handle,
+.tooltip-inner,
+.listar-postverified,
+.listar-btnsearchtoggle,
+.listar-iconquote,
+.listar-featuresvthree .listar-feature:hover,
+.listar-featurecontent i,
+.listar-contactinfo,
+.listar-innersearch,
+.listar-detailvtwo .listar-themetabnav li a:before,
+.autocomplete-suggestion.selected,
+.listar-addlistingsteps .steps ul li.done a .number,
+.listar-addlistingsteps .steps ul li.current a .number,
+.listar-btnadd,
+.listar-addlistingsteps .steps ul li:before,
+.listar-btncartdropdown:hover,
+.listar-btncartdropdown:focus,
+.tg-btnmale,
+.listar-tablefooter .listar-pagination ul li a:hover,
+.listar-tablefooter .listar-pagination ul li.listar-active a,
+.listar-cateicon,
+.listar-categorybox:hover,
+.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote,
+.tg-themetabnav li a:before { background:#f9b42b; }
+/*=============================================
+			Theme Border Color
+=============================================*/
+.listar-btnblue,
+.listar-btnblue:hover,
+.listar-btnsearchtoggle:before,
+.listar-views li a:hover,
+.listar-views li.listar-active a,
+.listar-fileuploadlabel .listar-btn,
+.listar-btncartdropdown:hover,
+.listar-btncartdropdown:focus,
+.listar-testimonialsvthree .owl-item:nth-child(odd) .listar-testimonial blockquote:before { border-color: #f9b42b; }
+.tooltip.top .tooltip-arrow{ border-top-color: #f9b42b; }

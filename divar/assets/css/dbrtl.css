@@ -1,0 +1,456 @@
+/*
+Theme Name: Listing Stars
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+
+body {
+	direction: rtl;
+	overflow-x: hidden;
+	unicode-bidi: embed;
+}
+.pin:after {
+	top: 50%;
+	left: 50%;
+	margin: -7px 0 0 -7px;
+}
+.pulse:after {
+	top: 50%;
+	left: 50%;
+	margin: -20px 0 0 -20px;
+}
+.sub-menu,
+.mega-menu,
+.listar-comments + .listar-pagination,
+.listar-comments + .listar-pagination ul,
+.listar-detailvtwo .listar-themepostfoot ul,
+.listar-howitwork .listar-feature,
+.listar-featurecontent,
+.listar-featuresvtwo,
+.listar-featuresvthree,
+.listar-featuresvtwo .listar-feature,
+.listar-featuresvthree .listar-feature,
+.listar-copyright { text-align: right; }
+.listar-lowerbox address,
+.listar-howitwork .listar-feature:nth-child(even) { text-align: left; }
+.pull-left,
+.listar-logo,
+.listar-addnav ul li,
+.listar-cartitem figure,
+.listar-totalarea span,
+.listar-formsearchlisting .form-group,
+.listar-formsearchlisting .form-group p,
+.listar-review,
+.listar-category i,
+.listar-category span,
+.listar-review span,
+.listar-review em,
+.listar-location,
+.listar-location i,
+.listar-location em,
+.listar-btnquickinfo,
+.listar-listfeatures li,
+.listar-openinghours,
+.listar-openinghours i,
+.listar-openinghours em,
+.listar-themepostfoot time,
+.listar-themepostfoot time i,
+.listar-themepostfoot time span,
+.listar-postcomment i,
+.listar-postcomment span,
+.listar-testimonial figure,
+.listar-lowerbox .listar-description,
+.listar-leftbox,
+.listar-btnadvancefeatures i,
+.listar-btnadvancefeatures span,
+.listar-radio,
+.listar-radio label,
+.listar-checkbox,
+.listar-checkbox label,
+.listar-listview .listar-featuredimg,
+.listar-amenities li,
+.listar-openinghoursarea .listar-openinghours li,
+.listar-openinghoursarea .listar-openinghours li span,
+.listar-prices li,
+.listar-commentauthorbox,
+.listar-commentcontent time i,
+.listar-commentcontent time span,
+.listar-authorgallery li,
+.listar-formreviewarea,
+.listar-rating,
+.listar-stars span,
+.listar-stars,
+.listar-detailvtwo .listar-reviewcategory,
+.listar-detailvtwo .listar-themetabnav li,
+.listar-sectionholder .listar-commentcontent .listar-helpful,
+.listar-widget .listar-socialicons li,
+.listar-widgettitle h3 i,
+.listar-widgettitle h3 span,
+.listar-widgetopeninghours .listar-openinghours li span,
+.listar-additionaldetails li span,
+.listar-range i,
+.listar-range span,
+.listar-feature figure,
+.listar-featurecontent,
+.listar-pricingplan,
+.listar-contactinfolist li i,
+.listar-contactinfolist li span,
+.listar-socialicons li,
+.listar-breadcrumb li,
+.listar-prevpost,
+.listar-comment > figure { float: right !important; }
+.pull-right,
+.listar-addnav,
+.listar-totalarea span + span,
+.listar-rangeslider,
+.slider.slider-horizontal,
+.listar-category,
+.listar-postbtns,
+.listar-placequickview .listar-placespost .listar-postcontent,
+.listar-postcomment,
+.listar-upperbox .listar-socialicons,
+.listar-lowerbox address,
+.listar-rightbox,
+.listar-listview .listar-placespost .listar-postcontent,
+.listar-openinghoursarea .listar-openinghours li span + span,
+.listar-helpful,
+.listar-fileuploadlabel,
+.listar-detailvtwo .listar-postinfotags,
+.listar-widgetopeninghours .listar-openinghours li span + span,
+.listar-additionaldetails li span + span,
+.listar-feature:nth-child(odd) figure,
+.listar-nextpost { float: left !important; }
+.listar-comment > figure{margin: 0 0 0 25px;}
+.listar-themedropdownmenu{
+	right: auto;
+	left: 0;
+}
+.listar-themedropdownmenu:before{
+	right: auto;
+	left: 10px;
+}
+.listar-iteminfo{
+	text-align: right;
+	padding: 13px 15px 13px 20px;
+}
+.listar-btndelate{
+	right: auto;
+	left: 0;
+}
+.sub-menu,
+.mega-menu,
+.listar-inputwithicon i{
+	left: auto;
+	right: 0;
+}
+.menu-item-has-children > a{padding: 0 0 0 12px;}
+.menu-item-has-children > a:before{
+	right: auto;
+	left: 0;
+}
+.menu-item-has-children .menu-item-has-children > a:before{content: '\f0d9';}
+.sub-menu li > .sub-menu{
+	left: auto;
+	right: 100%;
+}
+.listar-formsearchlisting fieldset{ padding: 0 0 0 200px; }
+.listar-formsearchlisting .form-group + .form-group {
+	border-left: 0;
+	border-right: 1px solid #cacaca;
+}
+.listar-formsearchlisting .form-group:nth-child(3){padding: 0 45px 0 10px;}
+.chosen-container-single .chosen-single {
+	padding: 0 45px 0 0;
+	-webkit-border-radius: 0 30px 30px 0;
+	border-radius: 0 30px 30px 0;
+}
+.listar-select:after{
+	right: auto;
+	left: 15px;
+}
+.chosen-container .chosen-drop{
+	left: auto;
+	right: -9999px;
+}
+.chosen-container.chosen-with-drop .chosen-drop{right: 0;}
+.listar-categorieschosen + .chosen-container .chosen-results li:before{
+	left: auto;
+	right: 16px;
+}
+.listar-categorieschosen + .chosen-container .chosen-results li {padding: 10px 45px 10px 20px;}
+.listar-formsearchlisting .listar-btn{
+	left: 5px;
+	right: auto;
+}
+.listar-categorypost .listar-featuredimg .listar-contentbox .listar-postcontent {padding: 0 60px 0 0;}
+.listar-categorypost .listar-featuredimg .listar-contentbox .listar-categoryicon {
+	left: auto;
+	right: 0;
+}
+.listar-placespost .listar-postcontent h3{padding: 0 0 0 30px;}
+.listar-postverified{
+	right: auto;
+	left: 0;
+}
+.listar-category i{margin: 0 0 0 10px;}
+.listar-review em {padding: 0 5px 0 0;}
+.listar-stars span:after,
+.listar-stars:before{
+	left: auto;
+	right: 0;
+}
+.listar-stars span {width: 80%;}
+.listar-location {padding: 0 15px 0 0;}
+.listar-btnquickinfo {
+	border-left: 0;
+	border-right: 1px solid #ddd;
+}
+.listar-btnclosequickview {
+	right: auto;
+	top: 8px;
+	left: 8px;
+}
+.listar-placequickview .listar-featuredimg{
+	left: auto;
+	right: 0;
+}
+.listar-contactnumber{
+	right: auto;
+	left: 0;
+}
+.listar-listfeatures li {padding: 0 20px 0 0;}
+.listar-listfeatures li:before{
+	left: auto;
+	right: 0;
+}
+.listar-openinghours {padding: 0 20px 0 0;}
+.listar-openinghours i {padding: 0 0 0 10px;}
+.mCSB_scrollTools .mCSB_draggerContainer{
+	position: relative;
+	padding-right: 25px;
+}
+.listar-themepostfoot time i,
+.listar-postcomment i {margin: 0 0 0 10px;}
+.listar-testimonial figure {margin: 0 0 0 30px;}
+.listar-navfooter ul li + li:before {
+	left: auto;
+	right: -3px;
+}
+.listar-listingarea .listar-formsearchlisting .form-group .form-control {padding: 15px 50px 15px 15px;}
+.listar-listingarea .listar-formsearchlisting fieldset:first-child .form-group i{
+	left: auto;
+	right: 10px;
+}
+.listar-advancefitures:before{
+	left: auto;
+	right: 50px;
+}
+.listar-advancefitures:after{
+	left: auto;
+	right: 52px;
+}
+.listar-btnadvancefeatures i{margin: 0 0 0 8px;}
+.listar-radio label,
+.listar-checkbox label{padding: 0 30px 0 0;}
+.listar-checkbox input[type=checkbox] + label:before,
+.listar-advancefitures .listar-checkbox input[type=checkbox]:checked + label:after{
+	left: auto;
+	right: 0;
+}
+.listar-listview .listar-featuredimg{border-radius: 0 10px 10px 0;}
+.listar-listview .listar-placespost .listar-postcontent{padding: 30px 30px 0 0;}
+.listar-listview .listar-placespost .listar-postcontent .listar-description {padding: 37px 0 37px 15px;}
+.listar-listview .listar-reviewcategory {padding: 0 0 30px 15px;}
+.listar-listview .listar-themepostfoot{
+	padding: 0 30px 0 0;
+	margin: 0 -30px 0 0;
+}
+.listar-companycontent h3{padding: 0 0 0 30px;}
+.listar-detail .listar-postcontent h1{padding: 0 0 0 30px;}
+.listar-detail .listar-review span,
+.listar-detail .listar-review em{float: none !important;}
+.listar-postinfotags li .listar-btnquickinfo{border: 0;}
+.listar-postinfotags > li > a i,
+.listar-postinfotags > li > span i,
+.listar-postinfotags > li .listar-btnshare > i,
+.listar-themepostfoot ul li i{padding: 0 0 0 5px;}
+.listar-overview .listar-leftbox {padding: 0 0 0 40px;}
+.listar-overview .listar-rightbox {padding: 0 40px 0 0;}
+.listar-amenities li {padding: 0 20px 0 0;}
+.listar-amenities li:before{
+	left: auto;
+	right: 0;
+}
+.listar-prices li:nth-child(odd){
+	padding-right: 0;
+	padding-left: 40px;
+}
+.listar-prices li:nth-child(even){
+	padding-left: 0;
+	padding-right: 40px;
+}
+.listar-pricebox{padding: 30px 0 30px 50px;}
+.listar-price{
+	right: auto;
+	left: 0;
+}
+.listar-pricebox h3{padding: 0 0 0 30px;}
+.listar-commentcontent time i {padding: 0 0 0 5px;}
+.listar-detailvtwo .listar-themetabnav li a{padding: 0 0 10px 60px;}
+.listar-detailvtwo .listar-themetabnav li a:before{
+	left: auto;
+	right: 0;
+}
+.listar-detailvtwo .listar-prices li{padding: 0;}
+.listar-detailvtwo .listar-prices li .listar-pricebox{padding-right: 0 !important;}
+.listar-sectionholder .listar-commentcontent {padding: 0 30px 0 0;}
+.listar-sidebar{float: left;}
+.listar-detailvtwo .listar-detailcontent .listar-content {margin: 0 0 0 33.33%;}
+.listar-widget .listar-socialicons li {padding: 0 0 10px 10px;}
+.listar-widgettitle h3 i,
+.listar-widgettitle h3 span{float: right;}
+.listar-widgettitle h3 i {padding: 0 0 0 10px;}
+.listar-breadcrumb li:first-child,
+.listar-breadcrumb li:last-child,
+.listar-breadcrumb li{
+	padding: 0 15px;
+	float: none !important;
+}
+.listar-breadcrumb li:after{
+	left: auto;
+	right: -3px;
+}
+.listar-feature figure{margin: 0 0 0 170px;}
+.listar-feature:nth-child(odd) figure {margin: 0 170px 0 0;}
+.listar-featurecontent i {
+	right: auto;
+	left: -45px;
+}
+.listar-howitwork .listar-feature:nth-child(even) .listar-featurecontent i{
+	left: auto;
+	right: -45px;
+}
+.listar-pricingplanbody ul li i{margin: 0 0 0 5px;}
+.listar-iconquote {
+	left: auto;
+	right: 30px;
+}
+.listar-contactinfo:before {
+	right: auto;
+	left: -60px;
+}
+.listar-formarea .listar-formnewsletter fieldset .form-control{padding: 10px 30px 10px 160px;}
+.listar-formnewsletter fieldset button{
+	right: auto;
+	left: 0;
+}
+.listar-postdetail .listar-postcontent .listar-postauthordpname,
+.listar-postdetail .listar-postcontent .listar-postcomment,
+.listar-postdetail .listar-postcontent time,
+.listar-postdetail .listar-postcontent .listar-btnquickinfo,
+.listar-comingsooncontent .listar-socialicons li{float: none !important;}
+.listar-prevpost a{text-align: right;}
+.listar-nextpost a{text-align: left;}
+.listar-prevpost a i,
+.listar-nextpost a i{display: none;}
+.listar-btndelate{
+	right: auto;
+	left: 0;
+}
+/* =============================================
+			Theme DashBoard RTL
+============================================= */
+.listar-wrapper,
+.cd-auto-hide-header {padding: 0 310px 0 0;}
+.listar-sidebarwrapper{
+	left: auto;
+	right: 0;
+}
+.listar-wrapper.listar-openmenu .listar-sidebarwrapper {
+	left: auto;
+	right: -310px;
+}
+.listar-btnmenutoggle{
+	left: auto;
+	right: 100%;
+}
+.listar-addnav ul li {padding: 0 0 0 30px;}
+.listar-navdashboard ul li a i,
+.listar-navdashboard ul li a span{float: right;}
+.listar-menutitle {
+	text-align: right;
+	padding: 0 20px 10px 0;
+}
+.listar-menutitleaccount {padding: 50px 20px 10px 0;}
+.lisatr-alert {padding: 10px 15px 10px 200px;}
+.lisatr-alert .close {
+	right: auto;
+	left: 15px;
+}
+.listar-btnaction {
+	right: auto;
+	left: 40px;
+}
+.listar-statistics li{float: right;}
+.listar-statisticicon{float: left;}
+.listar-formdashboard .listar-generalstates,
+.listar-formdashboard .listar-postvisits{float: right;}
+.listar-items li{float: right;}
+.listar-item i {
+	right: auto;
+	left: 20px;
+}
+.listar-peoplereviews{float: right;}
+.listar-boxtitle h3{float: right;}
+.listar-actionbtns{float: left;}
+.listar-recentactivity .listar-reviews li i{
+	float: right;
+	margin: 0 0 0 15px;
+}
+.listar-reviews li figure{
+	float: right;
+	margin: 0 0 0 10px;
+}
+.listar-reviewheading{float: right;}
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container{margin: 0;}
+.listar-actionbtns li{float: right;}
+.listar-actionbtns li + li {padding: 0 6px 0 0;}
+.listar-dashboardwishlists .listar-themepost{float: right;}
+.listar-dashboardwishlists .listar-themepost:nth-child(even) {
+	border-left: 0;
+	border-right: 1px solid #ddd;
+}
+.listar-dashboardwishlists .listar-themepost .listar-featuredimg{
+	float: right;
+	margin: 0 0 0 20px;
+}
+.listar-btndelpost,
+.listar-btnedite{
+	right: auto;
+	left: 30px;
+}
+.listar-btnedite{left: 70px;}
+.listar-dashboardbanner .listar-select{float: left;}
+.listar-addlistingsteps .steps ul li{float: right;}
+.listar-addlistingsteps .steps ul li:before{
+	left: auto;
+	right: 0;
+}
+.listar-addlistingsteps .steps ul li:first-child::before {border-radius: 0 8px 8px 0;}
+.listar-amenities li { padding: 0 0 0 20px; }
+.listar-businesshours li{float: right;}
+.listar-dashboardmyprofile {padding: 0 330px 20px 0;}
+.listare-profilepic {
+	left: auto;
+	right: 0;
+}
+.listar-formusers .listar-tableusers thead tr th,
+.listar-formusers .listar-tableusers tbody tr td{text-align: right;}
+.listar-breadcrumb li:first-child,
+.listar-breadcrumb li:last-child,
+.listar-breadcrumb li{float: right !important;}

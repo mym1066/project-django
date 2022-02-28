@@ -1,0 +1,82 @@
+{% load static %}
+<header id="listar-header" class="listar-header cd-auto-hide-header listar-haslayout">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <strong class="listar-logo"><a href="/"><img src="{% static 'images/logo1.png'%}" alt="company logo here"></a></strong>
+                <nav class="listar-addnav">
+                    
+                    <ul>
+                        {% if not request.user.is_authenticated %}
+                    
+                        <li>
+                            <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="/register">
+                                <i class="icon-smiling-face"></i>
+                                <span>همین حالا ملحق شوید</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="/login">
+                                <i class="icon-smiling-face"></i>
+                                <span>ورود</span>
+                            </a>
+                        </li>                           
+                    </ul>
+                        {% else %}
+
+                        <li>
+                            <a id="listar-btnsignin" class="listar-btn listar-btnblue" href="/log-out">
+                                <i class="icon-smiling-face"></i>
+                                <span>خروج</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="listar-btn listar-btngreen" href="/advertis_register">
+                                <i class="icon-plus"></i>
+                                <span>افزودن لیست</span>
+                            </a>
+                        </li>
+                        
+                    {% endif%}       
+                    </ul>
+                </nav>
+                <nav id="listar-nav" class="listar-nav">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#listar-navigation" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="listar-navigation" class="collapse navbar-collapse listar-navigation" style="margin-left: 137px;">
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0);">دیوار من</a>
+                                <ul class="sub-menu">
+                                    {% if not request.user.is_authenticated %}
+                                    <li><a href="login">ورود</a></li>
+                                    {% elif request.user.is_authenticated %}
+                                    
+                                    <li><a href="/dashboard">صفحه شخصی من</a></li>
+                                    <li><a href="#">نشان شده</a></li>
+                                    <li><a href="#">یادداشت</a></li>
+                                    <li><a href="#">دیوار برای کسب و کار</a></li>
+                                    <li><a href="#">بازدیدهای اخیر</a></li>
+                                    {% endif %}
+                                </ul>                               
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="/advertis">(لیست اگهی ها)جستجو</a>
+                            </li> 
+                            <li class="menu-item-has-children current-menu-item">
+                                <a href="/"style="color:#1b1818">صفحه اصلی</a>
+                            </li>
+                            </li>                           
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

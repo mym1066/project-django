@@ -1,0 +1,818 @@
+{% extends 'shared/_MainLayout.html' %}
+{% load static %}
+{% load render_partial %}
+{% block content %}
+<title>{% block title %}{% endblock %}</title>
+
+<body class="listar-home listar-homeone">
+
+	<div class="preloader-outer">
+		<div class="pin"></div>
+		<div class="pulse"></div>
+		
+	</div>
+	
+	<div id="listar-wrapper" class="listar-wrapper listar-haslayout">
+		<!--************************************
+				Home Slider Start
+		*************************************-->
+		<div class="listar-homebannerslider" > 
+			<div id="listar-homeslider" class="listar-homeslider owl-carousel" >
+				<div class="item" ><figure style="height: 650px;"><img src="{% static 'images/logo2.jpg'%}" alt="image description" style="height:645px"></figure></div>
+				<!-- <div class="item" ><figure style="height: 500px;"><img src="{% static 'images/logo2.jpg'%}" alt="image description"></figure></div> -->
+				<!-- <div class="item"><figure style="height: 650px;"><img src="{% static 'images/pic1.jpg'%}" alt="image description"></figure></div> -->
+				<div class="item"><figure style="height: 650px;"><img src="{% static 'images/pic3.jpg'%}" alt="image description"></figure></div>
+				<div class="item"><figure style="height: 650px;"><img src="{% static 'images/pic4.jpg'%}" alt="image description"></figure></div>
+				<div class="item"><figure style="height: 650px;"><img src="{% static 'images/pic5.jpg'%}" alt="image description"></figure></div>
+				<div class="item"><figure style="height: 650px;"><img src="{% static 'images/pic2.jpg'%}" alt="image description"></figure></div>
+				<div class="item"><figure style="height: 650px;"><img src="{% static 'images/pic6.jpg'%}" alt="image description"></figure></div>
+
+			</div>
+			
+	</div>
+
+		<main id="listar-main" class="listar-main listar-haslayout">
+			<!--************************************
+					Explore The City Start
+			*************************************-->
+			<section class="listar-sectionspace listar-haslayout " style="padding: 10px;">
+				<div class="col-sm-3" style="float:right; direction: rtl;width: 331px;">
+					<div class="listar-sectiontitle">
+						{% render_partial 'advertis_categories_partial' %}
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="width:1070px">
+							<div class="listar-sectionhead">
+									{% include 'shared/search_advertis_input_component.html'  %} 
+							
+									<div class="listar-sectiontitle"><h2>لیستی از اگهی های سایت </h2></div>
+									<div class="listar-description"> <p>شما میتوانید اگهی های مورد نطر خود را در این سایت پیدا کنید</p></div>
+							</div>
+						</div>
+								<div class="listar-themeposts listar-categoryposts" style="width:1070px;">                      
+											{% for item in advertis %}
+												{% include 'advertis_item_component.html' with advertis=item %}
+											{% endfor %}
+												
+											<div class="clearfix"></div>
+
+											<ul class="pagination">
+													{% if page_obj.has_previous %}
+														<li><a href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+													{% endif %}
+													{% for page in paginator.page_range %}
+														{% if page == page_obj.number %}
+															<li class="active"><a href="?page={{ page }}">{{ page }}</a></li>
+														{% else %}
+															<li><a href="?page={{ page }}">{{ page }}</a></li>
+														{% endif %}
+													{% endfor %}
+													{% if page_obj.has_next %}
+														<li><a href="?page={{ page_obj.next_page_number }}">بعدی</a></li>
+													{% endif %}
+											</ul>
+		
+								</div>                        
+					</div>
+					   
+			
+				</div>
+			</section>
+
+			<!--************************************
+					Explore The City End
+			*************************************-->
+			
+			<!--************************************
+					Best Theme Video Start
+			*************************************-->
+			<section class="listar-themeparallax" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{% static 'images/parallax/bgparallax-01.jpg'%}">
+				<div class="listar-parallaxcolor">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-push-2 col-md-8 col-lg-push-2 col-lg-8">
+								<div class="listar-videobox listar-prettyPhoto">
+									<h2>هدف اصلی ما معرفی شما به دیگران است<span style="color:#9bccda">جای تبلیغ شما در اینجا خالیست </span></h2>
+									<figure>
+										<!-- <img src="{% static 'images/logo1.png'%}" alt="image description"> -->
+										<img src="{% static 'images/logo2.jpg'%}"  style="width: 1500px; height: 400px;" alt="image description">
+										<figcaption>
+											<!--<a id="lister-video" class="listar-btnplay" href="https://www.youtube.com/watch?v=RhprOoSs9sk"><i class="icon-play3"></i></a>-->
+											
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+			<!--************************************
+					Best Theme Video End
+			*************************************-->
+			<!--************************************
+					Theme Features Start
+			*************************************-->
+			<!--<section class="listar-sectionspace listar-overlapcontent listar-bglight listar-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="listar-features">
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="listar-feature">
+									<span class="listar-featureicon"><i class="icon-layers"></i></span>
+									<h2><span class="listar-bluethemecolor">01</span> Choose a Category</h2>
+									<div class="listar-description">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="listar-feature">
+									<span class="listar-featureicon"><i class="icon-map3"></i></span>
+									<h2><span class="listar-bluethemecolor">02</span> Find Location</h2>
+									<div class="listar-description">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="listar-feature">
+									<span class="listar-featureicon"><i class="icon-hotairballoon"></i></span>
+									<h2><span class="listar-bluethemecolor">03</span> Go have Fun</h2>
+									<div class="listar-description">
+										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			************************************
+					Theme Features End
+			*************************************-->
+			<!--************************************
+					Explore The City Start
+			*************************************-->
+			<!--<section class="listar-sectionspace listar-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="listar-sectionhead">
+								<div class="listar-sectiontitle">
+									<h2>Latest Categories</h2>
+								</div>
+								<div class="listar-description">
+									<p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra doloremque laudantium <a class="listar-bluethemecolor" href="javascript:void(0);">See All Categories</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div id="listar-categoriespostslider" class="listar-themeposts listar-categoryposts listar-gridslider owl-carousel">
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-07.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-foods"></i></span>
+														<h3>Food &amp; Drinks</h3>
+														<h4>120 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-08.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-nightlife"></i></span>
+														<h3>Night Life</h3>
+														<h4>03 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-09.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-tourism"></i></span>
+														<h3>Hotels</h3>
+														<h4>18 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-10.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-healthfitness"></i></span>
+														<h3>Fitness</h3>
+														<h4>11 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-11.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-entertainment"></i></span>
+														<h3>Entertainment</h3>
+														<h4>03 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-12.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-shopping"></i></span>
+														<h3>Shops</h3>
+														<h4>20 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-07.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-foods"></i></span>
+														<h3>Food &amp; Drinks</h3>
+														<h4>120 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-08.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-nightlife"></i></span>
+														<h3>Night Life</h3>
+														<h4>03 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-09.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-tourism"></i></span>
+														<h3>Hotels</h3>
+														<h4>18 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-10.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-healthfitness"></i></span>
+														<h3>Fitness</h3>
+														<h4>11 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-11.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-entertainment"></i></span>
+														<h3>Entertainment</h3>
+														<h4>03 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-12.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-shopping"></i></span>
+														<h3>Shops</h3>
+														<h4>20 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-07.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-foods"></i></span>
+														<h3>Food &amp; Drinks</h3>
+														<h4>120 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-08.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-nightlife"></i></span>
+														<h3>Night Life</h3>
+														<h4>03 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-09.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-tourism"></i></span>
+														<h3>Hotels</h3>
+														<h4>18 Listings</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-10.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-healthfitness"></i></span>
+														<h3>Fitness</h3>
+														<h4>11 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+								<div class="item">
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-11.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-entertainment"></i></span>
+														<h3>Entertainment</h3>
+														<h4>03 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+									<div class="listar-themepost listar-categorypost">
+										<figure class="listar-featuredimg">
+											<a href="javascript:void(0);">
+												<img src="{% static 'images/post/img-12.jpg'%}" alt="image description">
+												<div class="listar-contentbox">
+													<div class="listar-postcontent">
+														<span class="listar-categoryicon listar-flip"><i class="icon-shopping"></i></span>
+														<h3>Shops</h3>
+														<h4>20 Listing</h4>
+													</div>
+												</div>
+											</a>
+										</figure>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>-->
+			<!--************************************
+					Explore The City End
+			*************************************
+			************************************
+					Discover New Places Start
+			*************************************-->
+			<section class="listar-sectionspace listar-bglight listar-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="listar-sectionhead">
+							</div>
+							<div class="listar-horizontalthemescrollbar">
+								<div class="listar-horizontalthemescrollbar">
+									<div class="listar-themeposts listar-placesposts">
+										{% for  slider in sliders %}
+											<div class="listar-themepost listar-placespost">
+													<figure class="listar-featuredimg"><a href="#"><img src="{{ slider.image.url }}" alt="{{slider.title}}"></a></figure>
+												<div class="listar-postcontent">
+													<h3><a href="{{ slider.link }}">{{ slider.title }}</a></h3>
+													<div class="listar-description">
+														
+													</div>
+													<div class="listar-reviewcategory">
+														<div class="listar-review">
+															<!-- <span class="listar-stars"><span></span></span>
+															<em>(3 Review)</em> -->
+														</div>
+														<a href="{{ slider.link }}" class="listar-category">
+															<!-- <i class="icon-nightlife"></i> -->
+															<span>{{ slider.description|truncatewords:10 }}</span>
+														</a>
+													</div>
+													<div class="listar-themepostfoot">
+														<a class="listar-location" href="javascript:void(0);">
+															<i class="icon-icons74"></i>
+															<em>{{ slider.link }}</em>
+														</a>
+														<div class="listar-postbtns">
+															<a class="listar-btnquickinfo" href="#" data-toggle="modal" data-target=".listar-placequickview"><i class="icon-expand"></i></a>
+															<a class="listar-btnquickinfo" href="javascript:void(0);"><i class="icon-heart2"></i></a>
+															<div class="listar-btnquickinfo">
+																<div class="listar-shareicons">
+																	<a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+																	<a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+																	<a href="javascript:void(0);"><i class="fa fa-pinterest-p"></i></a>
+																</div>
+																<a class="listar-btnshare" href="javascript:void(0);">
+																	<i class="icon-share3"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										{% endfor %}
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--************************************
+					Discover New Places End
+			*************************************-->
+			<!--************************************
+					Add Listing Start
+			*************************************-->
+			<!--<section class="listar-themeparallax" data-appear-top-offset="600" data-parallax="scroll" data-image-src="{% static 'images/parallax/bgparallax-02.jpg'%}">
+				<div class="listar-parallaxcolor listar-parallaxaddlisting">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-push-2 col-md-8 col-lg-push-2 col-lg-8">
+								<div class="listar-addlisting">
+									<h2>Run and Grow Your Business With Listing Star from Anywhere</h2>
+									<a class="listar-btn listar-btngreen" href="javascript:void(0);">
+										<i class="icon-plus"></i>
+										<span>Add Listing</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			************************************
+					Add Listing End
+			*************************************-->
+			<!--************************************
+					Blog Post Start
+			*************************************-->
+		<!--	<section class="listar-sectionspace listar-haslayout listar-bglight">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="listar-sectionhead">
+								<div class="listar-sectiontitle">
+									<h2>Latest News Posts</h2>
+								</div>
+								<div class="listar-description">
+									<p>Checkout Latest News and Articles from <a class="listar-bluethemecolor" href="javascript:void(0);">Our Blog</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="listar-themeposts listar-blogposts">
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="listar-themepost listar-post">
+									<figure class="listar-featuredimg">
+										<a href="newsdetail.html"><img src="{% static 'images/post/img-17.jpg'%}" alt="image description"></a>
+										<a class="listar-postcategory" href="newsv1.html">Fitness</a>
+									</figure>
+									<div class="listar-postcontent">
+										<figure class="listar-authorimg"><img src="{% static 'images/author/img-01.jpg'%}" height="54" width="54" alt="image description"></figure>
+										<h3><a href="newsdetail.html">The most common mistakes people make at the gym</a></h3>
+										<div class="listar-themepostfoot">
+											<time datetime="2017-08-08">
+												<i class="icon-clock4"></i>
+												<span>Apr 22, 2018</span>
+											</time>
+											<span class="listar-postcomment">
+												<i class="icon-comment"></i>
+												<span>3 Comments</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="listar-themepost listar-post">
+									<figure class="listar-featuredimg">
+										<a href="newsdetail.html"><img src="{% static 'images/post/img-18.jpg'%}" alt="image description"></a>
+										<a class="listar-postcategory" href="newsv2.html">Enjoy Life</a>
+									</figure>
+									<div class="listar-postcontent">
+										<figure class="listar-authorimg"><img src="{% static 'images/author/img-02.jpg'%}" alt="image description"></figure>
+										<h3><a href="newsdetail.html">Here's how drinking can be good for your wellbeing</a></h3>
+										<div class="listar-themepostfoot">
+											<time datetime="2017-08-08">
+												<i class="icon-clock4"></i>
+												<span>Apr 22, 2018</span>
+											</time>
+											<span class="listar-postcomment">
+												<i class="icon-comment"></i>
+												<span>3 Comments</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+								<div class="listar-themepost listar-post">
+									<figure class="listar-featuredimg">
+										<a href="newsdetail.html"><img src="{% static 'images/post/img-19.jpg'%}" alt="image description"></a>
+										<a class="listar-postcategory" href="newsv1.html">Travel</a>
+									</figure>
+									<div class="listar-postcontent">
+										<figure class="listar-authorimg"><img src="{% static 'images/author/img-03.jpg'%}" alt="image description"></figure>
+										<h3><a href="newsdetail.html">12 of the best family days out in the Melbourne</a></h3>
+										<div class="listar-themepostfoot">
+											<time datetime="2017-08-08">
+												<i class="icon-clock4"></i>
+												<span>Apr 22, 2018</span>
+											</time>
+											<span class="listar-postcomment">
+												<i class="icon-comment"></i>
+												<span>3 Comments</span>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			************************************
+					Blog Post End
+			*************************************-->
+			<!--************************************
+					Testimonials Start
+			*************************************
+			<section class="listar-sectionspace listar-haslayout">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="listar-sectionhead">
+								<div class="listar-sectiontitle">
+									<h2>People Feedback</h2>
+								</div>
+								<div class="listar-description">
+									<p>What our Clients Says <a class="listar-bluethemecolor" href="javascript:void(0);">View All</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-push-2 col-lg-8">
+							<div id="listar-testimonialslider" class="listar-testimonialslider listar-testimonials owl-carousel">
+								<div class="item listar-testimonial">
+									<figure>
+										<img src="{% static 'images/author/img-04.jpg'%}" alt="image description">
+										<figcaption>
+											<h3>John Doe</h3>
+											<h4>Manager at GreenTech</h4>
+										</figcaption>
+									</figure>
+									<blockquote>
+										<h5>Good Design</h5>
+										<q>Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat.</q>
+									</blockquote>
+								</div>
+								<div class="item listar-testimonial">
+									<figure>
+										<img src="{% static 'images/author/img-04.jpg'%}" alt="image description">
+										<figcaption>
+											<h3>John Doe</h3>
+											<h4>Manager at GreenTech</h4>
+										</figcaption>
+									</figure>
+									<blockquote>
+										<h5>Good Design</h5>
+										<q>Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat.</q>
+									</blockquote>
+								</div>
+								<div class="item listar-testimonial">
+									<figure>
+										<img src="{% static 'images/author/img-04.jpg'%}" alt="image description">
+										<figcaption>
+											<h3>John Doe</h3>
+											<h4>Manager at GreenTech</h4>
+										</figcaption>
+									</figure>
+									<blockquote>
+										<h5>Good Design</h5>
+										<q>Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat.</q>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>-->
+			<!--************************************
+					Testimonials End
+			*************************************-->
+			<!--************************************
+					Three Columns Start
+			*************************************
+			<section class="listar-haslayout">
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 pull-left">
+					<div class="row">
+						<div class="listar-postfirstlisting">
+							<figure><a href="javascript:void(0);"><img src="{% static 'images/placeholder-03.png'%}" alt="image description"></a></figure>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 pull-right">
+					<div class="row">
+						<div class="listar-followus">
+							<figure><a href="javascript:void(0);"><img src="{% static 'images/placeholder-04.png'%}" alt="image description"></a></figure>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="row">
+						<div class="listar-newsletter">
+							<div class="listar-newsletteroverlay">
+								<h2>Newsletter</h2>
+								<div class="listar-description">
+									<p>Lorem ipsum dolor sit amet, eu per legimus referrentur. Ius ne viris repudiare, nominavi sententiae eos in. Et duo salutatus consequat.</p>
+								</div>
+								<form class="listar-formtheme listar-formnewsletter">
+									<fieldset>
+										<input type="email" name="email" class="form-control" placeholder="Your email address">
+										<button type="button"><i class="icon-arrow-right2"></i></button>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>-->
+			<!--************************************
+					Three Columns End
+			*************************************-->
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+	</div>
+	<!--************************************
+			Theme Modal Box Start
+	*************************************-->
+	<!-- <div class="modal fade listar-placequickview" tabindex="-1" role="dialog">
+		<div class="modal-dialog listar-modaldialog" role="document">
+			<div class="modal-content listar-modalcontent">
+				<div class="listar-themepost listar-placespost">
+					<span class="listar-btnclosequickview" data-toggle="modal" data-target=".listar-placequickview">X</span>
+					<figure class="listar-featuredimg" data-vide-bg="poster: {% static 'images/post/img-16.jpg'%}" data-vide-options="position: 50% 50%">
+						<span class="listar-contactnumber">
+							<i class="icon-"><img src="{% static 'images/icons/icon-03.png'%}" alt="image description"></i>
+							<em> + 7890 456 133</em>
+						</span>
+					</figure>
+					<div class="listar-postcontent">
+						<h3><a href="javascript:void(0);">Serena Hotel</a><i class="icon-checkmark listar-postverified listar-themetooltip" data-toggle="tooltip" data-placement="top" title="Verified"></i></h3>
+						<div class="listar-description">
+							<p>Ut euismod ultricies sollicitudin. Curabitur sed dapibus nulla. Nulla eget iaculis lectus. Mauris ac maximus neque. Nam in mauris quis libero sodales eleifend. Morbi varius, nulla sit Nam in mauris quis libero sodales eleifend amet rutrum elementum, est elit finibus tellus, ut tristique elit risus at metus</p>
+						</div>
+						<ul class="listar-listfeatures">
+							<li>Pets allowed</li>
+							<li>Kitchen</li>
+							<li>Internet</li>
+							<li>Suitable for events</li>
+							<li>Gym</li>
+							<li>Dryer</li>
+							<li>Hot tub</li>
+							<li>Family/kid friendly</li>
+							<li>Wireless Internet</li>
+						</ul>
+						<div class="listar-reviewcategory">
+							<div class="listar-review">
+								<span class="listar-stars"><span></span></span>
+								<em>(3 Review)</em>
+							</div>
+							<a href="javascript:void(0);" class="listar-category">
+								<i class="icon-tourism"></i>
+								<span>Hotel</span>
+							</a>
+						</div>
+						<div class="listar-themepostfoot">
+							<span class="listar-openinghours">
+								<i class="icon-alarmclock2"></i>
+								<em>Today <span class="listar-greenthemecolor">Open Now</span> 10:00 AM - 5:00 PM</em>
+							</span>
+							<div class="listar-postbtns">
+								<a class="listar-btnquickinfo listar-liked" href="javascript:void(0);"><i class="icon-heart2"></i></a>
+								<div class="listar-btnquickinfo">
+									<div class="listar-shareicons">
+										<a href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+										<a href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+										<a href="javascript:void(0);"><i class="fa fa-pinterest-p"></i></a>
+									</div>
+									<a class="listar-btnshare" href="javascript:void(0);">
+										<i class="icon-share3"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</body>
+
+{% endblock %}
+{% block header_ref %}
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'shared/_MainLayout.html '%}
+{% block content %}
+<div class="listar-themetabs"><a>
+</a>
+
+<div class="tab-content listar-tabcontentloginregistered" style="text-align: -webkit-center;">
+    <h2 style="margin:19px 53px 11px 144px">ورود به حساب کاربـری </h2>
+
+    <div role="tabpanel" class="tab-pane fade active in" id="listar-loging">
+        <form class="listar-formtheme listar-formlogin" method="post">
+            {% csrf_token %}
+            <!--{{login_form}}-->
+            <fieldset>
+                <div class="form-group listar-inputwithicon"style="margin:8px 50px 20px ;text_a">
+                     
+                     <label for="{{ login_form.user_name.id_for_label }}">{{ login_form.user_name.label }}</label>
+                     {{ login_form.user_name }}
+                     {% for error in login_form.user_name.errors %}
+                         <p style="color: red;">{{ error }}</p>
+                     {% endfor %}
+                    <!--<input type="text" name="username" class="form-control" placeholder="نام کاربری یا ایمیل">-->                 
+                </div>
+                <div class="form-group listar-inputwithicon"style="margin:8px 50px 20px">
+                   <!-- <input type="password" name="password" class="form-control" placeholder="رمز عبور">-->
+                   <label for="{{ login_form.password.id_for_label }}">{{ login_form.password.label }}</label>
+                   {{ login_form.password }}
+                   {% for error in login_form.password.errors %}
+                       <p style="color: red;">{{ error }}</p>
+                   {% endfor %}
+                </div>
+                <div class="form-group"style="margin:8px 780px 20px">
+                    <div class="listar-checkbox">
+                        <input type="checkbox" name="remember" id="rememberpass2">
+                        <label for="rememberpass2" style="padding: 0 1550px 0 30px">مرا به خاطر بسپار</label>
+                    </div>
+                    <span style="float: inherit;margin-left:2px;margin-top: 48px;"><a href="#">رمز عبورخود را فراموش کرده اید</a></span>
+                </div>
+                <button class="listar-btn listar-btngreen" style="width: 300px;margin-left: 79px">ورود</button>
+               <!-- <form class="woocommerce-form woocommerce-form-login login" method="post">
+                    <input type="hidden" name="dig_nounce" class="dig_nounce" value="5468f5afc4">
+                    <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide " id="dig_wc_log_otp_container" otp="1" style="display: none;">
+                    <label for="dig_wc_log_otp">کد تایید <span class="required">*</span></label>
+                    <input type="tel" class="input-text" name="dig_wc_log_otp" id="dig_wc_log_otp" />
+                    </p>
+                    <input type="hidden" name="username" id="loginuname" value="" />
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="username">نام کاربری یا آدرس ایمیل&nbsp;<span class="required">*</span></label>
+                    <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" /> </p>
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="password">گذرواژه&nbsp;<span class="required">*</span></label>
+                    <input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
+                    </p>
+                    <p class="aiowps-captcha"><label for="aiowps-captcha-answer">لطفا پاسخ را به عدد انگلیسی وارد کنید:</label><div class="aiowps-captcha-equation"><strong>سه &#43; 15 = <input type="hidden" name="aiowps-captcha-string-info" id="aiowps-captcha-string-info" value="eakiy4syw4" /><input type="hidden" name="aiowps-captcha-temp-string" id="aiowps-captcha-temp-string" value="1643054289" /><input type="text" size="2" id="aiowps-captcha-answer" name="aiowps-captcha-answer" value="" autocomplete="off" /></strong></div></p>
+                    <p class="form-row">
+                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                    <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>مرا به خاطر بسپار</span>
+                    </label>
+                    </p>
+                    <p class="woocommerce-LostPassword lost_password">
+                    <a href="#">گذرواژه خود را فراموش کرده اید؟</a>
+                    </p>
+                    <input type="hidden" id="wc_login_cd" val="1">
+                    <p class="form-row form-row-wide">
+                    <input type="hidden" id="wc_code_dig" val="">
+                    <div class="loginViaContainer">
+                    
+                    <button onclick="return false" class="listar-btn listar-btngreen" name="loginviasms">ورود با کد یکبارمصرف</button>
+                    </div>
+                    <div class="dig_resendotp dig_wc_login_resend" id="dig_man_resend_otp_btn" dis='1'>ارسال مجدد کد یکبار مصرف <span>(00:<span>120</span>)</span></div> </p>
+                    </form>-->
+            </fieldset>
+        </form>
+    </div>
+</div>
+</div>
+<div class="listar-shareor"><span>یا</span></div>
+<div class="listar-signupwith">
+    <h2>... ورود با</h2>
+    <ul class="listar-signinloginwithsocialaccount" style="padding:30px 615px 27px">
+        <li class="listar-facebook"><a href="javascript:void(0);"><i class="icon-facebook-1"></i><span>Facebook</span></a></li>
+        <li class="listar-twitter"><a href="javascript:void(0);"><i class="icon-twitter-1"></i><span>Twitter</span></a></li>
+        <li class="listar-googleplus"><a href="javascript:void(0);"><i class="icon-google4"></i><span>Google +</span></a></li>
+    </ul>
+</div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}
